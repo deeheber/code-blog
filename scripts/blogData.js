@@ -1,4 +1,4 @@
-var postData = [
+var sourceData = [
   {
     title: 'First Project',
     publishedOn: '2015-02-11',
