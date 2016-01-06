@@ -24,8 +24,8 @@ sourceData.forEach(function(el){
   posts.push(new Post(el));
 });
 
-// posts.forEach(function(content){
-//   $('#articles').append(content.toHtml());
-// });
+posts.forEach(function(content){
+  $('#articles').append(content.toHtml());
+});
 
 /* Sorting function here */
