@@ -10,11 +10,16 @@ function Post(option){
 Post.prototype.toHtml = function() {
   var $newPost = $('article.template').clone();
 
+  /***Pulling post data into template***/
   $newPost.find('h2').text(this.title);
+  $newPost.find('.post_body').html(this.body);
+  $newPost.find('a').attr('href', this.projectURL);
 
-  $newPost.removeClass('template');
+  $newPost.removeAttr('class', 'template');
 
-  $newPost.append('<hr>');
+  //$newPost.append('<hr>');
+  $newPost.css('borderBottomStyle', 'solid');
+  $newPost.css('borderBottomWidth', '1px');
 
   return $newPost;
 };
@@ -27,5 +32,7 @@ sourceData.forEach(function(el){
 posts.forEach(function(content){
   $('#articles').append(content.toHtml());
 });
+
+$('article:last').css('border', 'none');
 
 /* Sorting function here */
