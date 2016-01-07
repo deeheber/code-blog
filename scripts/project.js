@@ -12,7 +12,7 @@ Post.prototype.toHtml = function() {
 
   /***Pulling post data into template***/
   $newPost.find('h2').text(this.title);
-  $newPost.find('.date').append(this.publishedOn);
+  $newPost.find('.date').append('on ' + this.publishedOn);
   $newPost.find('.post_body').html(this.body);
   $newPost.find('a').attr('href', this.projectURL);
 
@@ -21,6 +21,8 @@ Post.prototype.toHtml = function() {
   //$newPost.append('<hr>');
   $newPost.css('borderBottomStyle', 'solid');
   $newPost.css('borderBottomWidth', '1px');
+
+  $newPost.find('time').html('Finished ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
   return $newPost;
 };
