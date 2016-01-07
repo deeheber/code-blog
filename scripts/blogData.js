@@ -13,7 +13,7 @@ var sourceData = [
   },
   {
     title: 'Third Project',
-    publishedOn: '2015-14-12',
+    publishedOn: '2014-12-14',
     body: '<p>This is the body text for project 3</p><p>Austin irony disrupt, listicle everyday carry chicharrones four dollar toast. Cliche yuccie hoodie fap tousled pop-up. Plaid typewriter roof party sriracha iPhone, cornhole tumblr dreamcatcher photo booth +1 tilde biodiesel. Celiac meh austin cardigan, shoreditch aesthetic typewriter helvetica art party tote bag direct trade tacos tousled mumblecore locavore. Lomo affogato blog, slow-carb sriracha salvia messenger bag. Everyday carry kombucha intelligentsia, pickled tacos yr stumptown trust fund literally semiotics polaroid heirloom.</p>',
     projectURL: 'http://www.codefellows.org'
   }

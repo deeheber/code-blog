@@ -12,6 +12,7 @@ Post.prototype.toHtml = function() {
 
   /***Pulling post data into template***/
   $newPost.find('h2').text(this.title);
+  $newPost.find('.date').append(this.publishedOn);
   $newPost.find('.post_body').html(this.body);
   $newPost.find('a').attr('href', this.projectURL);
 
@@ -24,6 +25,11 @@ Post.prototype.toHtml = function() {
   return $newPost;
 };
 
+/***Sorts blog by newest projects first ***/
+sourceData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
 /*** Push new post to Posts array and write to the html ***/
 sourceData.forEach(function(el){
   posts.push(new Post(el));
@@ -34,5 +40,3 @@ posts.forEach(function(content){
 });
 
 $('article:last').css('border', 'none');
-
-/* Sorting function here */
