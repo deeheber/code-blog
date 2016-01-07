@@ -18,9 +18,10 @@ Post.prototype.toHtml = function() {
 
   $newPost.removeAttr('class', 'template');
 
+  /***Commenting out the single border underline just in case I want to bring it back***/
   //$newPost.append('<hr>');
-  $newPost.css('borderBottomStyle', 'solid');
-  $newPost.css('borderBottomWidth', '1px');
+  //$newPost.css('borderBottomStyle', 'solid');
+  //$newPost.css('borderBottomWidth', '1px');
 
   $newPost.find('time').html('Finished ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
 
@@ -41,4 +42,4 @@ posts.forEach(function(content){
   $('#articles').append(content.toHtml());
 });
 
-$('article:last').css('border', 'none');
+//$('article:last').css('border', 'none');
