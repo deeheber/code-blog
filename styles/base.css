@@ -1,12 +1,13 @@
 body {
   color: #333;
+  background-color: rgb(84, 134, 192);
 }
 
 header, footer {
   padding: 1em;
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: rgb(44, 51, 57);
+  color: rgb(240,240,240);
 }
 
 #name {
@@ -20,9 +21,9 @@ main {
 }
 
 a {
-  color: gray;
+  color: #333;
 }
 
 a:hover {
-  color: #333;
+  color: darkgray;
 }
