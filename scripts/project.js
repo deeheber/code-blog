@@ -3,12 +3,16 @@ var posts = [];
 function Post(option){
   this.title = option.title;
   this.publishedOn = option.publishedOn;
+  this.category = option.category;
   this.body = option.body;
   this.projectURL = option.projectURL;
 }
 
 Post.prototype.toHtml = function() {
   var $newPost = $('article.template').clone();
+
+  /***Adding category attribute to each post for filtering***/
+  $newPost.attr('data-category', this.category);
 
   /***Pulling post data into template***/
   $newPost.find('h2').text(this.title);
