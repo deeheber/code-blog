@@ -10,7 +10,7 @@ var sourceData = [
     title: 'Second Project',
     publishedOn: '2016-01-05',
     category: 'secondCat',
-    body: '<p>This is the body text for project 2</p><p>Meow destroy the blinds but white cat sleeps on a black shirt if it smells like fish eat as much as you wish. Wake up human for food at 4am stretch, so refuse to leave cardboard box yet stare out the window yet flop over. Claws in your leg. </p>',
+    body: '<p>This is the body text for project 2</p><p>Meow destroy the blinds but white cat sleeps on a black shirt if it smells like fish eat as much as you wish. Wake up human for food at 4am stretch, so refuse to leave cardboard box yet stare out the window yet flop over. Claws in your leg. </p><p>Meow destroy the blinds but white cat sleeps on a black shirt if it smells like fish eat as much as you wish. Wake up human for food at 4am stretch, so refuse to leave cardboard box yet stare out the window yet flop over. Claws in your leg. </p>',
     projectURL: 'http://www.yahoo.com'
   },
   {

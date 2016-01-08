@@ -31,7 +31,15 @@ projectView.handleCategoryFilter = function(){
   });
 };
 projectView.setPreview = function(){
-  
+  $('.post_body *:nth-of-type(n+2)').hide();
+  /***add event handler to display the full post body on click here***/
+  $('.read_more').on('click', function(event, element){
+    event.preventDefault();
+    $('.post_body *:nth-of-type(n+2)').show();
+    console.log(event.target);
+    /***event target parent to trigger which one to show currently it shows all of them***/
+  });
+
 };
 
 $(document).ready(function() {
