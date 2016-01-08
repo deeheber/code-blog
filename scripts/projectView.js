@@ -38,6 +38,7 @@ projectView.setPreview = function(){
     $('.post_body *:nth-of-type(n+2)').show();
     console.log(event.target);
     /***event target parent to trigger which one to show currently it shows all of them***/
+    /**could also use the .data() option to add an id to each post**/
   });
 
 };
