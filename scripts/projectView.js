@@ -30,8 +30,12 @@ projectView.handleCategoryFilter = function(){
     }
   });
 };
+projectView.setPreview = function(){
+  
+};
 
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
+  projectView.setPreview();
 });

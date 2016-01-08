@@ -18,7 +18,7 @@ Post.prototype.toHtml = function() {
   $newPost.find('h2').text(this.title);
   $newPost.find('.date').append(' on ' + this.publishedOn);
   $newPost.find('.post_body').html(this.body);
-  $newPost.find('a').attr('href', this.projectURL);
+  $newPost.find('.external_link a').attr('href', this.projectURL);
 
   $newPost.removeAttr('class', 'template');
 
