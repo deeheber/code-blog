@@ -5,20 +5,18 @@ projectView.populateFilters = function(){
     if(!$(this).hasClass('template')){
       var value = $(this).attr('data-category');
       var newOption = '<option value="'+value+'">'+value+'</option>';
-      $('#category-filter').append(newOption);
+      /**If the value doesn't exist > add it to the dropdown**/
+      if ($('#category-filter option[value="' + value + '"]').length === 0) {
+        $('#category-filter').append(newOption);
+      }
     }
   });
-
-
 };
 
 projectView.handleCategoryFilter = function(){
   $('#category-filter').on('change', function(){
-    //grab the selected value from the drop down menu
     var selectedOption = $(this).val();
-
     if(selectedOption){
-      //runs if a valid category is selected
       $('article').hide().each(function(){
         if($(this).attr('data-category') == selectedOption){
           $(this).show();
@@ -26,10 +24,10 @@ projectView.handleCategoryFilter = function(){
       });
     }
     else {
+      /***Show all posts if the first item in the dropdown is selected***/
       $('article').show();
       $('.template').hide();
     }
-
   });
 };
 
