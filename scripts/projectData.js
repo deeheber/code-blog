@@ -19,5 +19,12 @@ var sourceData = [
     category: 'thirdCat',
     body: '<p>This is the body text for project 3</p><p>Austin irony disrupt, listicle everyday carry chicharrones four dollar toast. Cliche yuccie hoodie fap tousled pop-up. Plaid typewriter roof party sriracha iPhone, cornhole tumblr dreamcatcher photo booth +1 tilde biodiesel. Celiac meh austin cardigan, shoreditch aesthetic typewriter helvetica art party tote bag direct trade tacos tousled mumblecore locavore. Lomo affogato blog, slow-carb sriracha salvia messenger bag. Everyday carry kombucha intelligentsia, pickled tacos yr stumptown trust fund literally semiotics polaroid heirloom.</p>',
     projectURL: 'http://www.codefellows.org'
+  },
+  {
+    title: 'Fourth Project',
+    publishedOn: '2013-05-21',
+    category: 'firstCat',
+    body: '<p>This is the body text for project 4 with firstCat category.</p><p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit , morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>',
+    projectURL: 'http://www.google.com'
   }
 ];
