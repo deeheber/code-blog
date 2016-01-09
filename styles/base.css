@@ -1,0 +1,29 @@
+body {
+  color: #333;
+  background-color: rgb(84, 134, 192);
+}
+
+header, footer {
+  padding: 1em;
+  text-align: center;
+  background-color: rgb(44, 51, 57);
+  color: rgb(240,240,240);
+}
+
+#name {
+  margin-top: 0;
+}
+
+main {
+  padding: 1em;
+  margin: auto;
+  width: 80%;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: darkgray;
+}
