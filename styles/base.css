@@ -1,6 +1,6 @@
 body {
-  color: #333;
-  background-color: rgb(84, 134, 192);
+  color: rgb(44, 51, 57);
+  background-color: rgba(84, 134, 192, 0.7);
 }
 
 header, footer {
@@ -21,6 +21,7 @@ article {
   margin: 5%;
   padding: 3%;
   background-color: 	rgb(240,240,240);
+  border-radius: 3px;
 }
 
 a {
@@ -28,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: darkgray;
+  color: #808080;
 }
 
 img {
