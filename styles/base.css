@@ -10,14 +10,17 @@ header, footer {
   color: rgb(240,240,240);
 }
 
-#name {
-  margin-top: 0;
-}
-
 main {
   padding: 1em;
   margin: auto;
   width: 80%;
+}
+
+article {
+  border: 1px solid rgb(44, 51, 57);
+  margin: 5%;
+  padding: 3%;
+  background-color: 	rgb(240,240,240);
 }
 
 a {
@@ -26,4 +29,8 @@ a {
 
 a:hover {
   color: darkgray;
+}
+
+img {
+  max-width: 100%;
 }
