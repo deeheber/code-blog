@@ -2,6 +2,7 @@ var topNav = {};
 
 topNav.handleNav = function(){
   $('#cross').hide();
+
   /*** Expose the nav when clicking the hamburger ***/
   $('#hamburger').on('click', function(){
     $('#main-nav').slideToggle('slow', function(){
@@ -9,6 +10,7 @@ topNav.handleNav = function(){
       $('#cross').show();
     });
   });
+  
   /*** Hide nav when x is clicked on ***/
   $('#cross').on('click', function(){
     $('#main-nav').slideToggle('slow', function(){
