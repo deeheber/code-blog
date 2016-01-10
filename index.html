@@ -2,25 +2,32 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Projects</title>
       <link rel="stylesheet" href="styles/normalize.css">
       <link rel="stylesheet" href="styles/base.css">
       <link rel="stylesheet" href="styles/modules.css">
+      <!-- Font Awesome CDN for Icons -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
       <header>
+        <!-- Controls for mobile nav -->
+        <button id="hamburger"><i class="fa fa-bars"></i></button>
+        <button id="cross"><i class="fa fa-times"></i></button>
+        <!-- Start of header content -->
         <h1 id="name">Danielle Heberling</h1>
         <h3>Web Development Portfolio</h3>
-      </header>
-      <main>
         <nav id="main-nav">
           <ul>
-            <li><a data-tab="home" class="tabLink">Home</a></li>
-            <li><a data-tab="about" class="tabLink">About</a></li>
-            <li><a href="https://www.linkedin.com/in/daheber" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/deeheber" target="_blank">GitHub</a></li>
+            <li><a data-tab="home" class="tabLink"><i class="fa fa-home"></i>Home</a></li>
+            <li><a data-tab="about" class="tabLink"><i class="fa fa-cog"></i>About</a></li>
+            <li><a href="https://www.linkedin.com/in/daheber" target="_blank"><i class="fa fa-linkedin"></i>LinkedIn</a></li>
+            <li><a href="https://github.com/deeheber" target="_blank"><i class="fa fa-github"></i>GitHub</a></li>
           </ul>
         </nav>
+      </header>
+      <main>
         <!-- Tab content area for project an about me -->
         <div>
           <!-- Begin home tab -->
@@ -55,5 +62,6 @@
         <script type="text/javascript" src="scripts/projectData.js"></script>
         <script type="text/javascript" src="scripts/project.js"></script>
         <script type="text/javascript" src="scripts/projectView.js"></script>
+        <script type="text/javascript" src="scripts/topNav.js"></script>
     </body>
   </html>
