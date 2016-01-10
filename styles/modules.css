@@ -1,20 +1,4 @@
-.template {
-  display: none;
-}
-
-
 #name {
-  margin-top: 0;
-}
-
-article, #about {
-  border: 1px solid rgb(44, 51, 57);
-  margin: 5%;
-  padding: 3%;
-  background-color: 	rgb(240,240,240);
-}
-
-article h2 {
   margin-top: 0;
 }
 
@@ -35,6 +19,21 @@ article h2 {
   font-size: 1.4em;
   border-bottom: 1px solid rgb(44, 51, 57);
   list-style-type: none;
-  padding: 3%
+  padding: 3%;
   /***NEXT STEP ADD INLINE DISPLAY HERE FOR DESKTOP***/
+}
+
+.template {
+  display: none;
+}
+
+article, #about {
+  border: 1px solid rgb(44, 51, 57);
+  margin: 5%;
+  padding: 3%;
+  background-color: 	rgb(240,240,240);
+}
+
+article h2 {
+  margin-top: 0;
 }
