@@ -3,6 +3,11 @@
 }
 
 /******  Navigation Styles  ******/
+button {
+  background-color: rgb(0,0,0);
+  border: none;
+  float: left;
+}
 #main-nav {
   background-color: rgb(240,240,240);
 }
