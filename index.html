@@ -13,14 +13,28 @@
         <h3>Web Development Portfolio</h3>
       </header>
       <main>
-        <nav>
+        <nav id="main-nav">
           <ul>
-            <li>Projects</li>
-            <li>About</li>
+            <li><a data-tab="home" class="tabLink">Home</a></li>
+            <li><a data-tab="about" class="tabLink">About</a></li>
             <li><a href="https://www.linkedin.com/in/daheber" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/deeheber" target="_blank">GitHub</a></li>
           </ul>
         </nav>
+        <!-- Tab content area for project an about me -->
+        <div>
+          <div id="home" >
+            <p>
+              Welcome to my blog categorizing all of my Web Development projects!
+            </p>
+          </div>
+          <div id="about" class="tab">
+            <p>
+              Here's some more info on how to contact me.
+            </p>
+          </div>
+        </div>
+        <!-- End of Tab content area -->
         <select id="category-filter">
           <option value="">--Category--</option>
         </select>

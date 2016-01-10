@@ -1,5 +1,15 @@
 var projectView = {};
 
+projectView.handleNavTabs = function(){
+  $('.tab').hide();
+  $('#main-nav').on('click', '.tabLink', function(event){
+    event.preventDefault();
+    var tabId = $(this).data('tab');
+    $('#'+ tabId).show();
+    $('#'+ tabId).show().siblings().hide();
+  });
+};
+
 projectView.populateFilters = function(){
   $('article').each(function(){
     if(!$(this).hasClass('template')){
@@ -46,6 +56,7 @@ projectView.setPreview = function(){
 };
 
 $(document).ready(function() {
+  projectView.handleNavTabs();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.setPreview();
