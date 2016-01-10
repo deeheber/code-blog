@@ -14,26 +14,39 @@
         <h3>Web Development Portfolio</h3>
       </header>
       <main>
-        <nav>
+        <nav id="main-nav">
           <ul>
-            <li>Projects</li>
-            <li>About</li>
+            <li><a data-tab="home" class="tabLink">Home</a></li>
+            <li><a data-tab="about" class="tabLink">About</a></li>
             <li><a href="https://www.linkedin.com/in/daheber" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/deeheber" target="_blank">GitHub</a></li>
           </ul>
         </nav>
-        <select id="category-filter">
-          <option value="">--Category--</option>
-        </select>
-        <section id="articles">
-          <article class="template">
-            <h2>Project Title</h2>
-              <p class="date"><time></time></p>
-              <p class="external_link"><a href="" target="_blank">Link to the project</a></p>
-              <p class="post_body">Body text here</p>
-              <p class="read_more"><a href="">Read More &rarr;</a></p>
-          </article>
-        </section>
+        <!-- Tab content area for project an about me -->
+        <div>
+          <!-- Begin home tab -->
+          <div id="home" >
+            <select id="category-filter">
+              <option value="">--Category--</option>
+            </select>
+            <section id="articles">
+              <article class="template">
+                <h2>Project Title</h2>
+                  <p class="date"><time></time></p>
+                  <p class="external_link"><a href="" target="_blank">Link to the project</a></p>
+                  <p class="post_body">Body text here</p>
+                  <p class="read_more"><a href="">Read More &rarr;</a></p>
+              </article>
+            </section>
+          </div>
+          <!-- Begin About Tab -->
+          <div id="about" class="tab">
+            <p>
+              I'll place some general and contact info here later.
+            </p>
+          </div>
+        </div>
+
       </main>
       <footer>
         &copy; 2015 Danielle H.

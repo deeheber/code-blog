@@ -2,8 +2,16 @@
   display: none;
 }
 
+
 #name {
   margin-top: 0;
+}
+
+article, #about {
+  border: 1px solid rgb(44, 51, 57);
+  margin: 5%;
+  padding: 3%;
+  background-color: 	rgb(240,240,240);
 }
 
 article h2 {
