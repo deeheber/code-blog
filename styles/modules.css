@@ -25,14 +25,14 @@ button {
 }
 
 #main-nav ul li {
-  font-size: 1.4em;
+  font-size: 1.2em;
   border-bottom: 1px solid rgb(44, 51, 57);
   list-style-type: none;
-  padding: 3%;
+  padding: 2%;
 }
 
 /***  Media queries for nav on desktop screens ***/
-@media (min-width: 780px) {
+@media (min-width: 770px) {
   #hamburger, #cross {
     display: none;
   }
@@ -59,6 +59,7 @@ button {
 
 article, #about {
   border: 1px solid rgb(44, 51, 57);
+  border-radius: 5px;
   margin: 5%;
   padding: 3%;
   background-color: 	rgb(240,240,240);
