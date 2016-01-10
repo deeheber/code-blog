@@ -23,30 +23,29 @@
         </nav>
         <!-- Tab content area for project an about me -->
         <div>
+          <!-- Begin home tab -->
           <div id="home" >
-            <p>
-              Welcome to my blog categorizing all of my Web Development projects!
-            </p>
+            <select id="category-filter">
+              <option value="">--Category--</option>
+            </select>
+            <section id="articles">
+              <article class="template">
+                <h2>Project Title</h2>
+                  <p class="date"><time></time></p>
+                  <p class="external_link"><a href="" target="_blank">Link to the project</a></p>
+                  <p class="post_body">Body text here</p>
+                  <p class="read_more"><a href="">Read More &rarr;</a></p>
+              </article>
+            </section>
           </div>
+          <!-- Begin About Tab -->
           <div id="about" class="tab">
             <p>
-              Here's some more info on how to contact me.
+              I'll place some general and contact info here later.
             </p>
           </div>
         </div>
-        <!-- End of Tab content area -->
-        <select id="category-filter">
-          <option value="">--Category--</option>
-        </select>
-        <section id="articles">
-          <article class="template">
-            <h2>Project Title</h2>
-              <p class="date"><time></time></p>
-              <p class="external_link"><a href="" target="_blank">Link to the project</a></p>
-              <p class="post_body">Body text here</p>
-              <p class="read_more"><a href="">Read More &rarr;</a></p>
-          </article>
-        </section>
+
       </main>
       <footer>
         &copy; 2015 Danielle H.

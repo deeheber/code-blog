@@ -2,7 +2,7 @@
   display: none;
 }
 
-article {
+article, #about {
   border: 1px solid rgb(44, 51, 57);
   margin: 5%;
   padding: 3%;
