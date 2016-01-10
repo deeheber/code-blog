@@ -7,14 +7,17 @@ button {
   background-color: rgb(0,0,0);
   border: none;
   float: left;
+  /***NEXT STEP add the float to a new layout.css to comply with SMACSS***/
 }
 #main-nav {
   background-color: rgb(240,240,240);
+  display: none; /* Hide the main nav on initial page load */
 }
 
 #main-nav ul {
   padding-left: 0;
 }
+
 #main-nav ul a {
   text-decoration: none;
   letter-spacing: 0.07em;
@@ -27,6 +30,31 @@ button {
   padding: 3%;
   /***NEXT STEP ADD INLINE DISPLAY HERE FOR DESKTOP***/
 }
+
+/***  Media queries for nav on desktop screens ***/
+@media (min-width: 780px) {
+  #hamburger, #cross {
+    display: none;
+  }
+
+  #main-nav {
+    display: block;
+    background-color: rgb(0, 51, 57);
+    width: 100%;
+    position: relative;
+  }
+
+  #main-nav ul li {
+    display: inline;
+    background-color: white;
+    font-size: 1em;
+    padding: 0.5%;
+    border-radius: 3px;
+    border: 1px solid rgb(44, 51, 57);
+  }
+
+}
+/***   End of top nav styles ***/
 
 .template {
   display: none;
