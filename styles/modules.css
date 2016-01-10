@@ -19,15 +19,22 @@ article h2 {
 }
 
 /******  Navigation Styles  ******/
-nav {
+#main-nav {
   background-color: rgb(240,240,240);
 }
-nav ul a {
+
+#main-nav ul {
+  padding-left: 0;
+}
+#main-nav ul a {
   text-decoration: none;
+  letter-spacing: 0.07em;
 }
 
-nav ul li {
-  font-size: 1.5em;
+#main-nav ul li {
+  font-size: 1.4em;
   border-bottom: 1px solid rgb(44, 51, 57);
   list-style-type: none;
+  padding: 3%
+  /***NEXT STEP ADD INLINE DISPLAY HERE FOR DESKTOP***/
 }
