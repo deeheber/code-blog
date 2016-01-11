@@ -44,7 +44,7 @@ button {
 
   #main-nav ul li {
     display: inline;
-    background-color: white;
+    background-color: rgb(240,240,240);
     font-size: 1em;
     padding: 0.7%;
     border-radius: 5px;
