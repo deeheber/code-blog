@@ -12,7 +12,7 @@ button {
 
 #main-nav {
   background-color: rgb(240,240,240);
-  display: none; /* Hide the main nav on initial page load */
+  display: none; /* Hide the main nav on initial page load for mobile */
 }
 
 #main-nav ul {
@@ -43,12 +43,13 @@ button {
   }
 
   #main-nav ul li {
-    display: inline;
-    background-color: white;
-    font-size: 1em;
+    display: inline-block;
+    border: none;
     padding: 0.7%;
-    border-radius: 5px;
-    border: 1px solid rgb(44, 51, 57);
+  }
+
+  #main-nav ul li a {
+    color: rgb(240, 240, 240);
   }
 }
 /***   End of top nav styles ***/
