@@ -12,13 +12,11 @@ projectView.handleNavTabs = function(){
 
 projectView.populateFilters = function(){
   $('article').each(function(){
-    if(!$(this).hasClass('template')){
-      var value = $(this).attr('data-category');
-      var newOption = '<option value="'+value+'">'+value+'</option>';
-      /**If the value doesn't exist > add it to the dropdown**/
-      if ($('#category-filter option[value="' + value + '"]').length === 0) {
-        $('#category-filter').append(newOption);
-      }
+    var value = $(this).attr('data-category');
+    var newOption = '<option value="'+value+'">'+value+'</option>';
+    /**If the value doesn't exist > add it to the dropdown**/
+    if ($('#category-filter option[value="' + value + '"]').length === 0) {
+      $('#category-filter').append(newOption);
     }
   });
 };
