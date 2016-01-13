@@ -1,0 +1,36 @@
+header, footer {
+  padding: 1em;
+  text-align: center;
+}
+
+#name {
+  margin-top: 0;
+}
+
+button {
+  float: left;
+}
+
+main {
+  padding: 1em;
+  margin: auto;
+  width: 80%;
+}
+
+article {
+  margin: 5%;
+  padding: 3%;
+}
+
+article, #about {
+  margin: 5%;
+  padding: 3%;
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
