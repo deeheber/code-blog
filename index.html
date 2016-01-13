@@ -14,9 +14,9 @@
       <script id="post-template" type="text/x-handlebars-template">
         <article class="template" data-category="{{category}}">
           <h2>{{title}}</h2>
-            <p class="date"><time>{{publishedOn}}</time></p>
+            <p class="date"><time>{{dateInfo}} on {{publishedOn}}</time></p>
             <p class="external_link"><a href="{{projectURL}}" target="_blank">Link to the project</a></p>
-            <p class="post_body">{{{body}}}</p>
+            <div class="post_body">{{{body}}}</div>
             <p class="read_more"><a href="">Read More &rarr;</a></p>
         </article>
       </script>

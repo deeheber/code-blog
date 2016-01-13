@@ -61,3 +61,4 @@ $(document).ready(function() {
   projectView.handleCategoryFilter();
   projectView.setPreview();
 });
+/*** NEXT STEPS POPULATE THE FILTER AND MAKE SURE IT STILL WORKS***/
