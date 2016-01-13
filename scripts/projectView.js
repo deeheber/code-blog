@@ -12,9 +12,9 @@ projectView.handleNavTabs = function(){
 
 projectView.populateFilters = function(){
   $('article').each(function(){
-    var value = $(this).attr('data-category');
+    var value = $(this).data('category');
     var newOption = '<option value="'+value+'">'+value+'</option>';
-    /**If the value doesn't exist > add it to the dropdown**/
+    /**If the value doesn't exist then add it to the dropdown**/
     if ($('#category-filter option[value="' + value + '"]').length === 0) {
       $('#category-filter').append(newOption);
     }
@@ -34,23 +34,19 @@ projectView.handleCategoryFilter = function(){
     else {
       /***Show all posts if the first item in the dropdown is selected***/
       $('article').show();
-      $('.template').hide();
     }
   });
 };
 projectView.setPreview = function(){
+  /*** Display only the first paragraph in the post body ***/
   $('.post_body *:nth-of-type(n+2)').hide();
-
   /***add event handler to display the full post body on click here***/
-  $('article').on('click', function(event){
-    if(event.target.nodeName =='A' && event.target.innerHTML == 'Read More →'){
-      /***runs if a "read more" link is clicked***/
-      event.preventDefault();
-      $(this).find('.post_body *:nth-of-type(n+2)').show();
-      $(this).find('.read_more').hide();
-    }
+  $('article').on('click', '.read_more ', function(event){
+    event.preventDefault();
+    $(this).parent().find('.post_body *:nth-of-type(n+2)').show();
+    $(this).parent().find('.read_more').hide();
+  /*** NEXT STEPS: add the ability to collapse an expanded description ***/
   });
-
 };
 
 $(document).ready(function() {
