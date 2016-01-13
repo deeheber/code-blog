@@ -54,10 +54,6 @@ button {
 }
 /***   End of top nav styles ***/
 
-.template {
-  display: none;
-}
-
 article, #about {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;
