@@ -26,7 +26,7 @@ projectView.handleCategoryFilter = function(){
     var selectedOption = $(this).val();
     if(selectedOption){
       $('article').hide().each(function(){
-        if($(this).attr('data-category') == selectedOption){
+        if($(this).data('category') == selectedOption){
           $(this).show();
         }
       });
