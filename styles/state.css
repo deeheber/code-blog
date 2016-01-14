@@ -9,6 +9,7 @@ button {
 #main-nav {
   background-color: rgb(240,240,240);
   display: none; /* Hide the main nav on initial page load for mobile */
+  font-family: 'PT Sans', sans-serif;
 }
 
 #main-nav ul {
@@ -49,3 +50,8 @@ button {
   }
 }
 /***   End of top nav styles ***/
+
+/*** Changes the cursor from an arrow to a hand when hovering over one ***/
+a {
+  cursor: pointer;
+}

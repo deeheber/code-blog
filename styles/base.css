@@ -1,6 +1,11 @@
 body {
   color: rgb(44, 51, 57);
   background-color: rgba(84, 134, 192, 0.7);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'PT Sans', sans-serif;
 }
 
 header, footer {
