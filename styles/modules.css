@@ -3,3 +3,7 @@ article, #about {
   border-radius: 5px;
   background-color: 	rgb(240,240,240);
 }
+
+.read_more a {
+  text-decoration: none;
+}

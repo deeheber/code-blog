@@ -42,10 +42,16 @@ projectView.setPreview = function(){
   $('.post_body *:nth-of-type(n+2)').hide();
   /***add event handler to display the full post body on click here***/
   $('article').on('click', '.read_more ', function(event){
+    var clickedLink = $(this);
     event.preventDefault();
-    $(this).parent().find('.post_body *:nth-of-type(n+2)').show();
-    $(this).parent().find('.read_more').hide();
-  /*** NEXT STEPS: add the ability to collapse an expanded description ***/
+    $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
+      if($(this).is(':visible')){
+        clickedLink.html('<a>Read Less <i class="fa fa-arrow-circle-up"></i></a>');
+      }
+      else {
+        clickedLink.html('<a>Read More <i class="fa fa-arrow-circle-down"></i></a>');
+      }
+    });
   });
 };
 
