@@ -11,14 +11,29 @@ projectView.handleNavTabs = function(){
 };
 
 projectView.populateFilters = function(){
-  $('article').each(function(){
-    if(!$(this).hasClass('template')){
-      var value = $(this).attr('data-category');
-      var newOption = '<option value="'+value+'">'+value+'</option>';
-      /**If the value doesn't exist > add it to the dropdown**/
-      if ($('#category-filter option[value="' + value + '"]').length === 0) {
-        $('#category-filter').append(newOption);
+  /*** Populate filters using a Handlebars template ***/
+  var source = $('#filter-template').html();
+  var template = Handlebars.compile(source);
+
+  var content = {
+    filter: [
+      {
+        name: 'Category'
       }
+    ]
+  };
+
+  var compiledHtml = template(content);
+  $('#category-filter').append(compiledHtml);
+  /*** End handlebars code ***/
+
+  /***Scan through categories in projectData and populate the drop down choices***/
+  $('article').each(function(){
+    var value = $(this).data('category');
+    var newOption = '<option value="'+value+'">'+value+'</option>';
+    /**If the value doesn't exist then add it to the dropdown**/
+    if ($('#category-filter option[value="' + value + '"]').length === 0) {
+      $('#category-filter').append(newOption);
     }
   });
 };
@@ -28,7 +43,7 @@ projectView.handleCategoryFilter = function(){
     var selectedOption = $(this).val();
     if(selectedOption){
       $('article').hide().each(function(){
-        if($(this).attr('data-category') == selectedOption){
+        if($(this).data('category') == selectedOption){
           $(this).show();
         }
       });
@@ -36,23 +51,25 @@ projectView.handleCategoryFilter = function(){
     else {
       /***Show all posts if the first item in the dropdown is selected***/
       $('article').show();
-      $('.template').hide();
     }
   });
 };
 projectView.setPreview = function(){
+  /*** Display only the first paragraph in the post body ***/
   $('.post_body *:nth-of-type(n+2)').hide();
-
   /***add event handler to display the full post body on click here***/
-  $('article').on('click', function(event){
-    if(event.target.nodeName =='A' && event.target.innerHTML == 'Read More →'){
-      /***runs if a "read more" link is clicked***/
-      event.preventDefault();
-      $(this).find('.post_body *:nth-of-type(n+2)').show();
-      $(this).find('.read_more').hide();
-    }
+  $('article').on('click', '.read_more ', function(event){
+    var clickedLink = $(this);
+    event.preventDefault();
+    $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
+      if($(this).is(':visible')){
+        clickedLink.html('<a>Read Less <i class="fa fa-arrow-circle-up"></i></a>');
+      }
+      else {
+        clickedLink.html('<a>Read More <i class="fa fa-arrow-circle-down"></i></a>');
+      }
+    });
   });
-
 };
 
 $(document).ready(function() {

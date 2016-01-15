@@ -1,25 +1,20 @@
 body {
   color: rgb(44, 51, 57);
   background-color: rgba(84, 134, 192, 0.7);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'PT Sans', sans-serif;
 }
 
 header, footer {
-  padding: 1em;
-  text-align: center;
   background-color: rgb(44, 51, 57);
   color: rgb(240,240,240);
 }
 
-main {
-  padding: 1em;
-  margin: auto;
-  width: 80%;
-}
-
 article {
   border: 1px solid rgb(44, 51, 57);
-  margin: 5%;
-  padding: 3%;
   background-color: 	rgb(240,240,240);
   border-radius: 5px;
 }
@@ -30,8 +25,4 @@ a {
 
 a:hover {
   color: #808080;
-}
-
-img {
-  max-width: 100%;
 }
