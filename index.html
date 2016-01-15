@@ -26,12 +26,13 @@
         </article>
       </script>
 
-      <!-- Handlebars template for category filter -->
+      <!-- Handlebars template for filter drop down menus -->
       <script id="filter-template" type="text/x-handlebars-template">
         {{#each filter}}
-          <option value="">--{{this.name}}--</option>
+          <option value="{{this}}">{{this}}</option>
         {{/each}}
       </script>
+      
     </head>
     <body>
       <header>
@@ -57,6 +58,7 @@
           <div id="home" >
           <!-- Category filter drop down select menu -->
             <select id="category-filter">
+              <option value="">--Category--</option>
             </select>
             <section id="articles">
             </section>

@@ -13,29 +13,25 @@ projectView.handleNavTabs = function(){
 projectView.populateFilters = function(){
   /*** Populate filters using a Handlebars template ***/
   var source = $('#filter-template').html();
-  var template = Handlebars.compile(source);
+  var filterTemplate = Handlebars.compile(source);
 
   var content = {
-    filter: [
-      {
-        name: 'Category'
-      }
-    ]
+    filter: [ ]
   };
-
-  var compiledHtml = template(content);
-  $('#category-filter').append(compiledHtml);
-  /*** End handlebars code ***/
 
   /***Scan through categories in projectData and populate the drop down choices***/
   $('article').each(function(){
     var value = $(this).data('category');
-    var newOption = '<option value="'+value+'">'+value+'</option>';
-    /**If the value doesn't exist then add it to the dropdown**/
-    if ($('#category-filter option[value="' + value + '"]').length === 0) {
-      $('#category-filter').append(newOption);
+    /*** Checking to see if the value already exists in the array ***/
+    if (content.filter.indexOf(value) == -1) {
+      content.filter.push(value);
     }
   });
+
+  var compiledHtml = filterTemplate(content);
+  $('#category-filter').append(compiledHtml);
+  /*** End handlebars code ***/
+
 };
 
 projectView.handleCategoryFilter = function(){
