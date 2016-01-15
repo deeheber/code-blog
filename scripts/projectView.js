@@ -4,9 +4,16 @@ projectView.handleNavTabs = function(){
   $('.tab').hide();
   $('#main-nav').on('click', '.tabLink', function(event){
     event.preventDefault();
+    var clickedLink = event.currentTarget;
     var tabId = $(this).data('tab');
+    /*** Show/hide the correct tab ***/
     $('#'+ tabId).show();
     $('#'+ tabId).show().siblings().hide();
+    /*** Underline active tab***/
+    $('.tabLink').each(function(){
+      $(this).removeClass('active');
+    });
+    $(clickedLink).addClass('active');
   });
 };
 
