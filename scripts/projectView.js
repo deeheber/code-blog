@@ -11,6 +11,23 @@ projectView.handleNavTabs = function(){
 };
 
 projectView.populateFilters = function(){
+  /*** Populate filters using a Handlebars template ***/
+  var source = $('#filter-template').html();
+  var template = Handlebars.compile(source);
+
+  var content = {
+    filter: [
+      {
+        name: 'Category'
+      }
+    ]
+  };
+
+  var compiledHtml = template(content);
+  $('#category-filter').append(compiledHtml);
+  /*** End handlebars code ***/
+
+  /***Scan through categories in projectData and populate the drop down choices***/
   $('article').each(function(){
     var value = $(this).data('category');
     var newOption = '<option value="'+value+'">'+value+'</option>';

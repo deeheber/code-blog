@@ -25,6 +25,13 @@
             <p class="read_more"><a href="">Read More <i class="fa fa-arrow-circle-down"></i></a></p>
         </article>
       </script>
+
+      <!-- Handlebars template for category filter -->
+      <script id="filter-template" type="text/x-handlebars-template">
+        {{#each filter}}
+          <option value="">--{{this.name}}--</option>
+        {{/each}}
+      </script>
     </head>
     <body>
       <header>
@@ -48,9 +55,8 @@
         <div>
           <!-- Begin home tab -->
           <div id="home" >
-          <!-- BONUS: SEE IF I CAN ADD A HANDLEBAR TEMPLATE FOR FILTERS LATER -->
+          <!-- Category filter drop down select menu -->
             <select id="category-filter">
-              <option value="">--Category--</option>
             </select>
             <section id="articles">
             </section>
