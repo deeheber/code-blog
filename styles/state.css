@@ -55,3 +55,8 @@ button {
 a {
   cursor: pointer;
 }
+/*** Underlines the active tab ***/
+.active {
+  text-decoration: underline !important;
+  /***color: #808080 !important;***/
+}
