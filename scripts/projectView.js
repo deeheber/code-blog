@@ -75,9 +75,14 @@ projectView.setPreview = function(){
   });
 };
 
-$(document).ready(function() {
+projectView.initHomePage = function(){
+  /*** Writes blog posts to the page and enables views ***/
+  Post.forEach(function(content){
+    $('#articles').append(content.toHtml());
+  });
+
   projectView.handleNavTabs();
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.setPreview();
-});
+};

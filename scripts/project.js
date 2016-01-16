@@ -1,4 +1,4 @@
-var posts = [];
+
 
 function Post(option){
   this.title = option.title;
@@ -7,6 +7,8 @@ function Post(option){
   this.body = option.body;
   this.projectURL = option.projectURL;
 }
+
+Post.all = [];
 
 Post.prototype.toHtml = function() {
   var theTemplateScript  = $('#post-template').html();
@@ -30,16 +32,31 @@ Post.prototype.toHtml = function() {
   return theCompiledHml;
 };
 
-/***Sorts blog by newest projects first ***/
-sourceData.sort(function(a,b) {
-  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
-});
+Post.loadAll = function(sourceData){
+  /***Sorts blog by newest projects first ***/
+  sourceData.sort(function(a,b) {
+    return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+  });
 
-/*** Push new post to Posts array and write to the html ***/
-sourceData.forEach(function(el){
-  posts.push(new Post(el));
-});
+  /*** Push new post to Posts array and write to the html ***/
+  sourceData.forEach(function(el){
+    posts.push(new Post(el));
+  });
+};
 
-posts.forEach(function(content){
-  $('#articles').append(content.toHtml());
-});
+
+Post.fetchAll = function(){
+  /*** Check if the data is in local storage ***/
+  if(localStorage.sourceData){
+    console.log('It is in local storage');
+    Post.loadAll(JSON.parse(localStorage.sourceData));
+    //projectView.initHomePage();
+  }
+  else {
+  /*** Pulls JSON data from the server via an AJAX call if not in local storage ***/
+    console.log('not in local storage');
+    $.ajax('/scripts/projectData.json').done(function(returnedObj){
+      console.log(returnedObj);
+    });
+  }
+};
