@@ -77,7 +77,7 @@ projectView.setPreview = function(){
 
 projectView.initHomePage = function(){
   /*** Writes blog posts to the page and enables views ***/
-  Post.forEach(function(content){
+  Post.all.forEach(function(content){
     $('#articles').append(content.toHtml());
   });
 

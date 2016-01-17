@@ -40,7 +40,7 @@ Post.loadAll = function(sourceData){
 
   /*** Push new post to Posts array and write to the html ***/
   sourceData.forEach(function(el){
-    posts.push(new Post(el));
+    Post.all.push(new Post(el));
   });
 };
 
@@ -48,15 +48,16 @@ Post.loadAll = function(sourceData){
 Post.fetchAll = function(){
   /*** Check if the data is in local storage ***/
   if(localStorage.sourceData){
-    console.log('It is in local storage');
     Post.loadAll(JSON.parse(localStorage.sourceData));
-    //projectView.initHomePage();
+    projectView.initHomePage();
   }
   else {
   /*** Pulls JSON data from the server via an AJAX call if not in local storage ***/
-    console.log('not in local storage');
     $.ajax('/scripts/projectData.json').done(function(returnedObj){
       console.log(returnedObj);
+      localStorage.setItem('sourceData', JSON.stringify(returnedObj));
+      Post.loadAll(returnedObj);
+      projectView.initHomePage();
     });
   }
 };
