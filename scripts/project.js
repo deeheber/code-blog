@@ -1,4 +1,4 @@
-
+Post.all = [];
 
 function Post(option){
   this.title = option.title;
@@ -7,8 +7,6 @@ function Post(option){
   this.body = option.body;
   this.projectURL = option.projectURL;
 }
-
-Post.all = [];
 
 Post.prototype.toHtml = function() {
   var theTemplateScript  = $('#post-template').html();
