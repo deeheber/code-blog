@@ -44,18 +44,42 @@ Post.loadAll = function(sourceData){
 
 
 Post.fetchAll = function(){
-  /*** Check if the data is in local storage ***/
-  if(localStorage.sourceData){
+    /*** Get eTag to see if the file on the server was changed ***/
+    /*** This helps to make sure the data in local storage is up to date ***/
+  $.ajax({
+    method: 'HEAD',
+    url: '/scripts/projectData.json',
+    success: function(data, message, xhr){
+      var newETag = xhr.getResponseHeader('ETag');
+      Post.compareEtags(newETag);
+    }
+  });
+};
+
+/*** Trying to avoid 'callback hell' by adding additional functions here ***/
+/*** This function pulls down a new copy of the JSON file from the server ***/
+Post.pullEntireFile = function (){
+  $.ajax('/scripts/projectData.json').done(function(returnedObj){
+    console.log('pulling a new file from the server');
+    localStorage.setItem('sourceData', JSON.stringify(returnedObj));
+    Post.loadAll(returnedObj);
+    projectView.initHomePage();
+  });
+};
+
+Post.compareEtags = function (newETag){
+  var oldETag = localStorage.eTag;
+  console.log('old etag ' + oldETag);
+  console.log('new etag ' + newETag);
+  if (oldETag == newETag) {
+    //file wasn't modified so use cached version
+    console.log('taking data from local storage');
     Post.loadAll(JSON.parse(localStorage.sourceData));
     projectView.initHomePage();
   }
   else {
-  /*** Pulls JSON data from the server via an AJAX call if not in local storage ***/
-    $.ajax('/scripts/projectData.json').done(function(returnedObj){
-      console.log(returnedObj);
-      localStorage.setItem('sourceData', JSON.stringify(returnedObj));
-      Post.loadAll(returnedObj);
-      projectView.initHomePage();
-    });
+    //the file on the server was modified or this is the first time loading the site
+    localStorage.setItem('eTag', newETag);
+    Post.pullEntireFile();
   }
 };
