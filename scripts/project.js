@@ -14,7 +14,7 @@ Post.prototype.toHtml = function() {
 
   /*** Calculation for how long ago a post was created ***/
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-  this.dateInfo = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+  this.dateInfo = this.publishedOn ? 'Published ' + this.daysAgo + ' days ago' : '(draft)';
 
   var context = {
     'category': this.category,
@@ -52,7 +52,6 @@ Post.fetchAll = function(){
   else {
   /*** Pulls JSON data from the server via an AJAX call if not in local storage ***/
     $.ajax('/scripts/projectData.json').done(function(returnedObj){
-      console.log(returnedObj);
       localStorage.setItem('sourceData', JSON.stringify(returnedObj));
       Post.loadAll(returnedObj);
       projectView.initHomePage();
