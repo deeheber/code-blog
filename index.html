@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width" initial-scale="1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Projects</title>
 
       <!-- Stylesheets -->
@@ -85,7 +85,8 @@
         <script type="text/javascript" src="scripts/projectView.js"></script>
         <script type="text/javascript" src="scripts/topNav.js"></script>
         <script>
-          Post.fetchAll(projectView.initHomePage);;
+          Post.fetchAll(projectView.initHomePage);
+          topNav.handleNav();
         </script>
     </body>
   </html>
