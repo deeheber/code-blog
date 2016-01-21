@@ -37,42 +37,28 @@
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
 
-    /*** Push new post to Posts array and write to the html ***/
-    sourceData.forEach(function(el){
-      Post.all.push(new Post(el));
+    /*** Add JSON data to the Post array and write to the html ***/
+    Post.all = sourceData.map(function(el){
+      return new Post(el);
     });
   };
 
 
   Post.fetchAll = function(callback){
-      /*** Get eTag to see if the file on the server was changed ***/
-      /*** This helps to make sure the data in local storage is up to date ***/
-    $.ajax({
-      method: 'HEAD',
-      url: '/scripts/projectData.json',
-      success: function(data, message, xhr){
-        var newETag = xhr.getResponseHeader('ETag');
-        var oldETag = localStorage.eTag;
-        //console.log('old etag ' + oldETag);
-        //console.log('new etag ' + newETag);
-        if (oldETag == newETag) {
-          //file wasn't modified so use cached version
-          //console.log('taking data from local storage');
-          Post.loadAll(JSON.parse(localStorage.sourceData));
-          callback();
-        }
-        else {
-          //the file on the server was modified or this is the first time loading the site
-          localStorage.setItem('eTag', newETag);
-          $.ajax('/scripts/projectData.json').done(function(returnedObj){
-            //console.log('pulling a new file from the server');
-            localStorage.setItem('sourceData', JSON.stringify(returnedObj));
-            Post.loadAll(returnedObj);
-            callback();
-          });
-        }
-      }
-    });
+    /*** Check if the data is in local storage ***/
+    if(localStorage.sourceData){
+      Post.loadAll(JSON.parse(localStorage.sourceData));
+      callback();
+    }
+    else {
+    /*** Pulls JSON data from the server via an AJAX call if not in local storage ***/
+      $.ajax('/scripts/projectData.json').done(function(returnedObj){
+        localStorage.setItem('sourceData', JSON.stringify(returnedObj));
+        Post.loadAll(returnedObj);
+        callback();
+      });
+    }
   };
+
   module.Post = Post;
 })(window);
