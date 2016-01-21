@@ -20,9 +20,5 @@
       });
     });
   };
-
-  // $(document).ready(function() {
-  //   topNav.handleNav();
-  // });
   module.topNav = topNav;
 })(window);
