@@ -13,12 +13,6 @@ header, footer {
   color: rgb(240,240,240);
 }
 
-article {
-  border: 1px solid rgb(44, 51, 57);
-  background-color: 	rgb(240,240,240);
-  border-radius: 5px;
-}
-
 a {
   color: rgb(44, 51, 57);
 }
