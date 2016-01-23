@@ -33,6 +33,12 @@
         {{/each}}
       </script>
 
+      <script id="stats-template" type="text/x-handlebars-template">
+        <p>Total Number of Posts: {{postNum}}</p>
+        <p>Total Number of Words in all Posts: {{postWordTotal}}</p>
+        <p>Average Number of words in each post: {{avgPostWord}}</p>
+      </script>
+
     </head>
     <body>
       <header>
@@ -76,12 +82,8 @@
           <!-- Begin Stats Tab -->
           <div id="stats" class="tab">
             <h2>Stats</h2>
-            <p>There really isn't a ton of actual relevant info here, but I just thought it would be fun to experiment a bit with a few JavaScript functions to calculate some stats about the content within the blog.</p>
-            <div>
-              <p>Total Number of Posts: </p>
-              <p>Total Number of Words in all Posts: </p>
-              <p>Average Number of words in each post: </p>
-            </div>
+            <p>There really isn't really a ton of overly relevant info here, but I just thought it would be fun to experiment a bit with a few JavaScript functions to calculate stats about the content within the blog.</p>
+            <div id="stats_content"></div>
           </div>
         </div>
       </main>

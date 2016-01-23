@@ -58,6 +58,30 @@
       }
     });
   };
+
+  projectView.initStats = function(){
+
+    /*** Calc total num words in all posts ***/
+    var wordTotal = Post.all.map(function(post){
+      return post.body.match(/\b\w+/g).length;
+    }).reduce(function(a, b){
+      return a + b;
+    });
+
+    /*** Build handlebars template and append to the DOM ***/
+    var statsTemplateScript = $('#stats-template').html();
+    var statsTemplate = Handlebars.compile(statsTemplateScript);
+    var statsContent = {
+      'postNum': Post.all.length,
+      'postWordTotal': wordTotal,
+      'avgPostWord': (wordTotal/Post.all.length).toFixed(2)
+    };
+    var compiledHTML = statsTemplate(statsContent);
+
+    $('#stats_content').append(compiledHTML);
+
+  };
+
   projectView.setPreview = function(){
     /*** Display only the first paragraph in the post body ***/
     $('.post_body *:nth-of-type(n+2)').hide();
@@ -82,27 +106,7 @@
       $('#articles').append(content.toHtml());
     });
 
-    //Calc number of posts published
-    //console.log(Post.all.length);
-
-    // Calc total num words in all posts
-    var test = Post.all.map(function(post){
-      return post.body.match(/\b\w+/g).length;
-    }).reduce(function(a, b){
-      return a + b;
-    });
-
-    //calc number of words in each post
-    var test2 = Post.all.map(function(post){
-      return post.body.match(/\b\w+/g).length;
-    });
-
-    console.log('total number of posts: ' + Post.all.length);
-    console.log('total number of words in all posts: ' + test);
-    console.log('number of words in each post: ' + test2);
-    console.log('average number of words in each post: ' + (test/Post.all.length));
-
-    //Next steps: figure out how to write this content to the page using handlebars
+    projectView.initStats();
     projectView.handleNavTabs();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
