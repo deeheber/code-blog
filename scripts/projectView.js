@@ -59,8 +59,25 @@
     });
   };
 
-  projectView.initStats = function(){
+  projectView.setPreview = function(){
+    /*** Display only the first paragraph in the post body ***/
+    $('.post_body *:nth-of-type(n+2)').hide();
+    /***add event handler to display the full post body on click here***/
+    $('article').on('click', '.read_more ', function(event){
+      var clickedLink = $(this);
+      event.preventDefault();
+      $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
+        if($(this).is(':visible')){
+          clickedLink.html('<a>Read Less <i class="fa fa-arrow-circle-up"></i></a>');
+        }
+        else {
+          clickedLink.html('<a>Read More <i class="fa fa-arrow-circle-down"></i></a>');
+        }
+      });
+    });
+  };
 
+  projectView.initStats = function(){
     /*** Calc total num words in all posts ***/
     var wordTotal = Post.all.map(function(post){
       return post.body.match(/\b\w+/g).length;
@@ -79,25 +96,6 @@
     var compiledHTML = statsTemplate(statsContent);
 
     $('#stats_content').append(compiledHTML);
-
-  };
-
-  projectView.setPreview = function(){
-    /*** Display only the first paragraph in the post body ***/
-    $('.post_body *:nth-of-type(n+2)').hide();
-    /***add event handler to display the full post body on click here***/
-    $('article').on('click', '.read_more ', function(event){
-      var clickedLink = $(this);
-      event.preventDefault();
-      $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
-        if($(this).is(':visible')){
-          clickedLink.html('<a>Read Less <i class="fa fa-arrow-circle-up"></i></a>');
-        }
-        else {
-          clickedLink.html('<a>Read More <i class="fa fa-arrow-circle-down"></i></a>');
-        }
-      });
-    });
   };
 
   projectView.initHomePage = function(){
