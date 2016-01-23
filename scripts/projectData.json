@@ -1,30 +1,44 @@
 [
   {
-    "title": "First Project",
-    "publishedOn": "2015-12-11",
-    "category": "firstCat",
-    "body": "<p>This is the body text for project 1.</p><p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.</p>  <p>De carne lumbering animata corpora quaeritis. <img src=\"http://www.travelportland.com/wp-content/uploads/2013/08/Plan_PDXByBike_BikeEastbankEsplanade_courtesy_TravelPortland.jpg\" >Summus brains sit , morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>",
-    "projectURL": "http://www.google.com"
+    "title": "About Me Site",
+    "publishedOn": "2015-11-15",
+    "category": "Website",
+    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>Disclaimer: This project does not necessarily reflect my current abilities, however I decided to put this up here to remind myself of how far I've come in my adventure of learning how to code websites. I'd love to revisit this at a later date to improve the navigation and game interface.</p>  <p>Technologies used: HTML, CSS, Vanilla JavaScript.</p><p><img src=\"http://www.travelportland.com/wp-content/uploads/2013/08/Plan_PDXByBike_BikeEastbankEsplanade_courtesy_TravelPortland.jpg\"></p>",
+    "projectURL": "http://deeheber.github.io/About-Me/"
   },
   {
-    "title": "Second Project",
-    "publishedOn": "2016-01-05",
-    "category": "secondCat",
-    "body": "<p>This is the body text for project 2</p><p>Meow destroy the blinds but white cat sleeps on a black shirt if it <img src=\"http://techonomy.com/wp-content/uploads/2013/04/shutterstock_42765808-610x354.jpg\" /> smells like fish eat as much as you wish. Wake up human for food at 4am stretch, so refuse to leave cardboard box yet stare out the window yet flop over. Claws in your leg. </p><p>Meow destroy the blinds but white cat sleeps on a black shirt if it smells like fish eat as much as you wish. Wake up human for food at 4am stretch, so refuse to leave cardboard box yet stare out the window yet flop over. Claws in your leg. </p>",
-    "projectURL": "http://www.yahoo.com"
+    "title": "Donut Shop",
+    "publishedOn": "2015-11-25",
+    "category": "Tooling",
+    "body": "<p>This app is a forecaster for a fictional set of Donut Shops that was designed to be used by the shop employees.</p><p>I began by building out the tables for each shop's data using HTML and then gradually added more functionality through JavaScript to dynamically fill the data in the tables. This taught me how to better utilize JavaScript Objects to store data within an application and to build out things with scalability in mind.</p><p>My favorite feature of this is the interactivity where the user can select a specific shop to show as well as update the data within the tables.</p><p>Some enhancement ideas include but aren't limited to: adding an input field where the user can add a new shop table to the app as well as adding persistence to store the changes made to the numbers that the user has entered.</p><p><img src=\"http://techonomy.com/wp-content/uploads/2013/04/shutterstock_42765808-610x354.jpg\" /></p>",
+    "projectURL": "https://github.com/deeheber/Donut-Shop"
   },
   {
-    "title": "Third Project",
-    "publishedOn": "2014-12-14",
-    "category": "thirdCat",
-    "body": "<p>This is the body text for project 3</p><p>Austin irony disrupt, listicle everyday carry chicharrones four dollar toast. Cliche yuccie hoodie fap tousled pop-up. Plaid<img src=\"https://www.phase2technology.com/wp-content/uploads/2014/06/Portland.jpg\" /> typewriter roof party sriracha iPhone, cornhole tumblr dreamcatcher photo booth +1 tilde biodiesel. Celiac meh austin cardigan, shoreditch aesthetic typewriter helvetica art party tote bag direct trade tacos tousled mumblecore locavore. Lomo affogato blog, slow-carb sriracha salvia messenger bag. Everyday carry kombucha intelligentsia, pickled tacos yr stumptown trust fund literally semiotics polaroid heirloom.</p>",
-    "projectURL": "http://www.codefellows.org"
+    "title": "Vote Tracker",
+    "publishedOn": "2015-12-06",
+    "category": "Tooling",
+    "body": "<p>This app allows users to vote on their preferred item, stores the vote, and then displays the totals in a graph using the <a href=\"http://canvasjs.com/\" target=\"_blank\">canvasJS</a> library.</p><p>An enhancement that I'd like to add would be drag and drop, so the user can reorder the chart items.</p><p>This was one of the first times that I've worked with a third party developed JavaScript library and it was a ton of fun.</p><p>Technologies used: HTML, CSS, Vanilla JavaScript, and the canvasJS library.</p><p><img src=\"https://www.phase2technology.com/wp-content/uploads/2014/06/Portland.jpg\" /></p>",
+    "projectURL": "https://github.com/deeheber/Vote-Tracker"
   },
   {
-    "title": "Fourth Project",
-    "publishedOn": "2013-05-21",
-    "category": "firstCat",
-    "body": "<p>This is the body text for project 4 with firstCat category.</p><p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit , morbo vel maleficia? De apocalypsi <img src=\"https://www.travelportland.com/wp-content/uploads/2013/04/portland-streetcar-downtown.jpg\" />gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>",
-    "projectURL": "http://www.google.com"
+    "title": "Discover Portland",
+    "publishedOn": "2015-12-21",
+    "category": "Collaboration",
+    "body": "<p>Unsure what to do this weekend? Are you currently in Portland, OR? Well you're in luck, because this site can help suggest fun activities in the area.</p><p>This was one of my first collaboration projects using git. My team was looking to solve the problem of not being able to decide what to do when you have visitors from out of town.</p><p>Due to time constraints, we decided it was best to use radio buttons for the activity picker, however we're looking to rewrite the logic to allow for checkboxes instead. This way, you wouldn't have to rely on the 'reset' button to clear out the current selections.</p><p>This app also keeps the currently selected radio boxes in the browser's local storage, just in case the site visitor navigates away from the page to view an external resource and wants to come back to the activities page just as they left it. My main contribution to this was writing the underlying vanilla JS logic for the radio buttons on the 'activities' page.</p><p><img src=\"https://www.travelportland.com/wp-content/uploads/2013/04/portland-streetcar-downtown.jpg\" /></p>",
+    "projectURL": "http://risachi.github.io/travel-project/"
+  },
+  {
+    "title": "Rock Paper Scissors",
+    "publishedOn": "2015-12-24",
+    "category": "Game",
+    "body": "<p>Originally, I built this game to teach myself flow control via if/else statements in JavaScript. The idea came from doing the <a href=\"https://www.codecademy.com/\" target=\"_blank\">Codecademy</a> modules. However as you can see this turned into a much larger project.</p><p>I went down the rabbit hole of Google's <a href=\"https://developer.chrome.com/extensions/getstarted/\" target=\"_blank\">developer documentation</a> (which is really amazing btw) and realized that building a Chrome extension was much easier than I originally thought.</p><p>Some add ons that I'd like to explore in the future include: adding persistence, so the choices/scores stay in place if you close out of the popup. It would also be neat to refactor this code to be a bit more compact, possibly with a library such as jQuery.</p><p>Technologies used: HTML, CSS, Vanilla JavaScript, JSON.</p><p>Placeholder for image of the app</p>",
+    "projectURL": "https://github.com/deeheber/Rock-Paper-Scissors-Chrome-Extension"
+  },
+  {
+    "title": "Portfolio Blog",
+    "publishedOn": "2016-01-19",
+    "category": "Website",
+    "body": "<p>You're currently looking at it! Whoa...inception?</p><p>This project was a very fun learning experience, and I have many new tools in my belt to apply to future projects.</p><p>This was built using an MVC approach along with some functional programming concepts. I also incorporated third party libraries including <a href=\"http://handlebarsjs.com/\" target=\"_blank\">Handlebars</a> and jQuery. This blog also contains AJAX calls to reference and load the JSON data files for each post. Prior to building out this Blog, I primarily used JavaScript Objects to store data. JSON and AJAX can be very helpful when building larger enterprise level apps.</p><p>Placeholder for screenshot of the project.</p> ",
+    "projectURL": "https://github.com/deeheber/code-blog"
   }
 ]

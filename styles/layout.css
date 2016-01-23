@@ -17,12 +17,7 @@ main {
   width: 80%;
 }
 
-article {
-  margin: 5%;
-  padding: 3%;
-}
-
-article, #about {
+article, #about, #stats {
   margin: 5%;
   padding: 3%;
 }
