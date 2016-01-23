@@ -3,7 +3,7 @@
     "title": "About Me Site",
     "publishedOn": "2015-11-15",
     "category": "Website",
-    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>Disclaimer: This project does not necessarily reflect my current abilities, however I decided to put this up here to remind myself of how far I've come in my adventure of learning how to code websites. I'd love to revisit this at a later date to improve the navigation and game interface.</p>  <p>Technologies used: HTML, CSS, Vanilla JavaScript.</p> <p><img src=\"http://www.travelportland.com/wp-content/uploads/2013/08/Plan_PDXByBike_BikeEastbankEsplanade_courtesy_TravelPortland.jpg\" ></p>",
+    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>Disclaimer: This project does not necessarily reflect my current abilities, however I decided to put this up here to remind myself of how far I've come in my adventure of learning how to code websites. I'd love to revisit this at a later date to improve the navigation and game interface.</p>  <p>Technologies used: HTML, CSS, Vanilla JavaScript.</p><p><img src=\"http://www.travelportland.com/wp-content/uploads/2013/08/Plan_PDXByBike_BikeEastbankEsplanade_courtesy_TravelPortland.jpg\"></p>",
     "projectURL": "http://deeheber.github.io/About-Me/"
   },
   {

@@ -82,6 +82,26 @@
       $('#articles').append(content.toHtml());
     });
 
+    //Calc number of posts published
+    //console.log(Post.all.length);
+
+    // Calc total num words in all posts
+    var test = Post.all.map(function(post){
+      return post.body.match(/\b\w+/g).length;
+    }).reduce(function(a, b){
+      return a + b;
+    });
+
+    //calc number of words in each post
+    var test2 = Post.all.map(function(post){
+      return post.body.match(/\b\w+/g).length;
+    });
+
+    console.log('total number of posts: ' + Post.all.length);
+    console.log('total number of words in all posts: ' + test);
+    console.log('number of words in each post: ' + test2);
+    console.log('average number of words in each post: ' + (test/Post.all.length));
+
     projectView.handleNavTabs();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
