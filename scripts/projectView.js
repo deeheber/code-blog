@@ -102,6 +102,7 @@
     console.log('number of words in each post: ' + test2);
     console.log('average number of words in each post: ' + (test/Post.all.length));
 
+    //Next steps: figure out how to write this content to the page using handlebars
     projectView.handleNavTabs();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
