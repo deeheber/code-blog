@@ -68,10 +68,10 @@
       event.preventDefault();
       $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
         if($(this).is(':visible')){
-          clickedLink.html('<a>Read Less <i class="fa fa-arrow-circle-up"></i></a>');
+          clickedLink.html('<a>Read Less</a>');
         }
         else {
-          clickedLink.html('<a>Read More <i class="fa fa-arrow-circle-down"></i></a>');
+          clickedLink.html('<a>Read More</a>');
         }
       });
     });

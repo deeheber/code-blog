@@ -12,17 +12,17 @@
       <link rel="stylesheet" href="styles/layout.css">
       <link rel="stylesheet" href="styles/modules.css">
       <link rel="stylesheet" href="styles/state.css">
-      <!-- Font Awesome CDN for Icons -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
       <!-- Handlebars template for blog posts -->
       <script id="post-template" type="text/x-handlebars-template">
         <article  data-category="{{category}}">
           <h2>{{title}}</h2>
-            <p class="date"><time>{{dateInfo}} on {{publishedOn}}</time></p>
-            <p class="external_link"><a href="{{projectURL}}" target="_blank">Link to the project</a></p>
+            <p class="date"><time>{{dateInfo}}</time></p>
+            <p class="external_link"><a href="{{projectURL}}" target="_blank">View project</a></p>
             <div class="post_body">{{{body}}}</div>
-            <p class="read_more"><a href="">Read More <i class="fa fa-arrow-circle-down"></i></a></p>
+            <p class="read_more"><a href="">Read More</a></p>
         </article>
       </script>
 
@@ -43,10 +43,10 @@
     <body>
       <header>
         <!-- Controls for mobile nav -->
-        <button id="hamburger"><i class="fa fa-bars"></i></button>
-        <button id="cross"><i class="fa fa-times"></i></button>
+        <button id="hamburger"><span class="lnr lnr-menu"></span></button>
+        <button id="cross"><span class="lnr lnr-cross"></span></button>
         <!-- Start of header content -->
-        <h1 id="name">Danielle Heberling</h1>
+        <h1>Danielle Heberling</h1>
         <h3>Web Development Portfolio</h3>
         <nav id="main-nav">
           <ul>
@@ -65,7 +65,7 @@
           <div id="home" >
           <!-- Category filter drop down select menu -->
             <select id="category-filter">
-              <option value="">Filter by Category</option>
+              <option value="">Filter By Category</option>
             </select>
             <section id="articles">
             </section>
@@ -75,9 +75,9 @@
             <h2>Well Hello There!</h2>
             <p>Throughout my entire life, I've always questioned why and how things work with a strong desire to make them better. Career wise, I've been working in tech support. I love helping customers, but found that my job revolved around asking an engineer to fix a bug or UX issue.</p>
             <p>Wanting to have a deeper understanding of how bugs are fixed, I began doing some online coding tutorials and attended a <a href="http://www.codefellows.org/" target="_blank">coding bootcamp</a>. I've been hooked ever since!</p>
-            <p>Having a strong belief that technology can enrich prople's lives, I've made it my persional mission to contribute everything that I can to help make the web a better place with a clean minimalist design.</p>
+            <p>Having a strong belief that technology can enrich prople's lives, I've made it my persional mission to contribute everything that I can to help make the web a better place.</p>
             <p>When I'm not dreaming up or building my next project, you can most likely find me enjoying a cup of coffee along with a book.</p>
-            <p>Thanks for visiting my site, I hope you find some inspriation from my projects. If you'd like to reach out to me, feel free to contact me via my <a href="http://whatamidoingwithmy.life" target="_blank">personal website</a> or social media links above. </p>
+            <p>Thanks for visiting my site! If you'd like to reach out to me, feel free to contact me via my <a href="http://whatamidoingwithmy.life" target="_blank">personal website</a> or social media links above. </p>
           </div>
           <!-- Begin Stats Tab -->
           <div id="stats" class="tab">

@@ -1,3 +1,7 @@
+.lnr-menu, .lnr-cross {
+  font-size: 1.3em;
+}
+
 article, #about, #stats {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;

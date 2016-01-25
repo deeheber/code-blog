@@ -1,6 +1,7 @@
 body {
   color: rgb(44, 51, 57);
-  background-color: rgba(84, 134, 192, 0.7);
+  /*background-color: rgba(84, 134, 192, 0.7);*/
+  background-color: lightslategray;
   font-family: 'Open Sans', sans-serif;
 }
 
