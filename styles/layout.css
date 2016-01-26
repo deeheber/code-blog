@@ -3,10 +3,6 @@ header, footer {
   text-align: center;
 }
 
-#name {
-  margin-top: 0;
-}
-
 button {
   float: left;
 }
@@ -17,12 +13,18 @@ main {
   width: 80%;
 }
 
+#category-filter {
+  display: block;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
 article, #about, #stats {
   margin: 5%;
   padding: 3%;
 }
 
-article h2 {
+h2 {
   margin-top: 0;
 }
 
