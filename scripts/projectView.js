@@ -128,6 +128,7 @@
     projectView.handleNavTabs();
     projectView.populateFilters();
     projectView.handleCategoryFilter();
+    projectView.handleSidebarFilter();
     projectView.setPreview();
   };
   module.projectView = projectView;
