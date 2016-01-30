@@ -48,7 +48,7 @@ img {
 @media all and (min-width:770px){
   #content {
     width: 75%;
-    float: left;
+    float: right;
   }
 
 #category-filter{
@@ -58,6 +58,6 @@ img {
   #sidebar {
     display: block;
     width: 25%;
-    float: right;
+    float: left;
   }
 }

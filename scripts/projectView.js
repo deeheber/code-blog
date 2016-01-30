@@ -60,6 +60,18 @@
   };
 
   projectView.handleSidebarFilter = function(){
+    var offset = $('#sidebar').offset();
+
+    $(window).on('scroll', function(){
+      if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
+        $('#sidebar').stop().css('top', (offset.top * 0.5));
+      } else if ($(window).scrollTop() > offset.top){
+        $('#sidebar').stop().css('top', 0);
+      } else if ($(window).scrollTop() < (offset.top * 0.5)){
+        $('#sidebar').stop().css('top', offset.top);
+      }
+    });
+
     $('#sidebar').on('click', 'a', function(){
       event.preventDefault();
       var selectedOption = $(this).data('category');
