@@ -59,6 +59,24 @@
     });
   };
 
+  projectView.handleSidebarFilter = function(){
+    $('#sidebar').on('click', 'a', function(){
+      event.preventDefault();
+      var selectedOption = $(this).data('category');
+      if(selectedOption){
+        $('article').hide().each(function(){
+          if($(this).data('category') == selectedOption){
+            $(this).show();
+          }
+        });
+      }
+      else {
+        /***Show all posts if the first item in the dropdown is selected***/
+        $('article').show();
+      }
+    });
+  };
+
   projectView.setPreview = function(){
     /*** Display only the first paragraph in the post body ***/
     $('.post_body *:nth-of-type(n+2)').hide();
