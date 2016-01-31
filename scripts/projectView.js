@@ -67,7 +67,8 @@
         $('#sidebar').stop().css('top', (offset.top * 0.5));
       } else if ($(window).scrollTop() > offset.top){
         $('#sidebar').stop().css('top', 0);
-      } else if ($(window).scrollTop() < (offset.top * 0.5)){
+      } else {
+        //($(window).scrollTop() < (offset.top * 0.5))
         $('#sidebar').stop().css('top', offset.top);
       }
     });

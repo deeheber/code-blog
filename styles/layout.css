@@ -17,13 +17,11 @@ main {
 
 #content {
   width: 100%;
-  /*float: left;*/
 }
 
 #sidebar {
   display: none;
   width: 0%;
-  /*float: right;*/
 }
 
 #category-filter {
