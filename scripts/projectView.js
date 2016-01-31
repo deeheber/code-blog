@@ -61,7 +61,7 @@
 
   projectView.handleSidebarFilter = function(){
     var offset = $('#sidebar').offset();
-
+    /***Keep sidebar fixed on scroll***/
     $(window).on('scroll', function(){
       if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
         $('#sidebar').stop().css('top', (offset.top * 0.5));
@@ -72,9 +72,10 @@
         $('#sidebar').stop().css('top', offset.top);
       }
     });
-
+    /***Hide/show articles when a category in the sidebar is clicked***/
     $('#sidebar').on('click', 'a', function(){
       event.preventDefault();
+      var clickedLink = event.target;
       var selectedOption = $(this).data('category');
       if(selectedOption){
         $('article').hide().each(function(){
@@ -87,6 +88,11 @@
         /***Show all posts if the first item in the dropdown is selected***/
         $('article').show();
       }
+      /***Underline sidebar nav for selected category***/
+      $('.sidebarLink').each(function(){
+        $(this).removeClass('active');
+      });
+      $(clickedLink).addClass('active');
     });
   };
 
