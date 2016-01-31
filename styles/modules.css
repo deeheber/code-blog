@@ -12,12 +12,6 @@ article, #about, #stats {
   text-decoration: none;
 }
 
-#sidebar {
-  position: fixed;
-  /*top:0;
-  overflow-y:auto; */
-}
-
 #sidebar ul {
   list-style-type: none;
 }

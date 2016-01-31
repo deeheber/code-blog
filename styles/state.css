@@ -6,5 +6,10 @@ a {
 }
 /*** Underlines the active tab ***/
 .active {
-  text-decoration: underline !important;
+  /*text-decoration: underline !important;*/
+  color: #808080 !important;
+}
+
+.active-sidebar {
+  color: rgb(240,240,240) !important;
 }

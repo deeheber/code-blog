@@ -10,7 +10,7 @@
       /*** Show/hide the correct tab ***/
       $('#'+ tabId).show();
       $('#'+ tabId).show().siblings().hide();
-      /*** Underline active tab***/
+      /*** Highlight active tab***/
       $('.tabLink').each(function(){
         $(this).removeClass('active');
       });
@@ -60,8 +60,8 @@
   };
 
   projectView.handleSidebarFilter = function(){
-    var offset = $('#sidebar').offset();
     /***Keep sidebar fixed on scroll***/
+    var offset = $('#sidebar').offset();
     $(window).on('scroll', function(){
       if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
         $('#sidebar').stop().css('top', (offset.top * 0.5));
@@ -88,11 +88,11 @@
         /***Show all posts if the first item in the dropdown is selected***/
         $('article').show();
       }
-      /***Underline sidebar nav for selected category***/
+      /***Highlight sidebar nav for selected category***/
       $('.sidebarLink').each(function(){
-        $(this).removeClass('active');
+        $(this).removeClass('active-sidebar');
       });
-      $(clickedLink).addClass('active');
+      $(clickedLink).addClass('active-sidebar');
     });
   };
 
