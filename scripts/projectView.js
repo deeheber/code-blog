@@ -9,7 +9,7 @@
       var tabId = $(this).data('tab');
       /*** Show/hide the correct tab ***/
       $('#'+ tabId).show();
-      $('#'+ tabId).show().siblings().hide();
+      $('#'+ tabId).siblings().hide();
       /*** Highlight active tab***/
       $('.tabLink').removeClass('active');
       $(clickedLink).addClass('active');
@@ -101,7 +101,7 @@
       $('.sidebarLink').removeClass('active-sidebar');
       $(clickedLink).addClass('active-sidebar');
 
-      /***Change drop down filter that appears on smaller screens incase the window size is changed***/
+      /***Change drop down filter that appears on smaller screens in case the window size is changed***/
       $('#category-filter').children().each(function(){
         $(this).removeAttr('selected');
         if($(this).val() == selectedOption){
