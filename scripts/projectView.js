@@ -94,9 +94,17 @@
         /***Show all posts if the first item in the dropdown is selected***/
         $('article').show();
       }
-      /***Highlight sidebar nav for selected category***/
+      /***Highlight sidebar nav link for selected category***/
       $('.sidebarLink').removeClass('active-sidebar');
       $(clickedLink).addClass('active-sidebar');
+
+      /***Change drop down filter that appears on smaller screens incase the window size is changed***/
+      $('#category-filter').children().each(function(){
+        $(this).removeAttr('selected');
+        if($(this).val() == selectedOption){
+          $(this).attr('selected', true);
+        }
+      });
     });
   };
 
