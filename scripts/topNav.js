@@ -17,6 +17,16 @@
         $('#hamburger').show();
       });
     });
+
+    /***Removes inline styles added by jQuery while mobile styles enabled. This is helpful if the screen is resized to a larger size***/
+    $(window).resize(function(){
+      if (window.matchMedia('(min-width: 770px)').matches) {
+        //Desktop Style
+        $('#main-nav').removeAttr('style');
+        $('#hamburger').removeAttr('style');
+        $('#cross').removeAttr('style');
+      } 
+    });
   };
   module.topNav = topNav;
 })(window);
