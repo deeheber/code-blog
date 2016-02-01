@@ -22,10 +22,6 @@ main {
 #sidebar {
   display: none;
   width: 0%;
-  position: fixed;
-  margin-left: 62%;
-  /*top:0;
-  overflow-y:auto; */
 }
 
 #category-filter {
@@ -61,5 +57,9 @@ img {
     display: block;
     width: 20%;
     float: right;
+    /*position: fixed;
+    margin-left: 62%;*/
+    /*top:0;
+    overflow-y:auto; */
   }
 }

@@ -11,9 +11,7 @@
       $('#'+ tabId).show();
       $('#'+ tabId).show().siblings().hide();
       /*** Highlight active tab***/
-      $('.tabLink').each(function(){
-        $(this).removeClass('active');
-      });
+      $('.tabLink').removeClass('active');
       $(clickedLink).addClass('active');
     });
   };
@@ -56,22 +54,30 @@
         /***Show all posts if the first item in the dropdown is selected***/
         $('article').show();
       }
+      /***Highlight sidebar nav for selected category in case the window is resized***/
+      $('.sidebarLink').removeClass('active-sidebar');
+      $('.sidebarLink').each(function(){
+        if($(this).data('category') == selectedOption){
+          $(this).addClass('active-sidebar');
+        }
+      });
+
     });
   };
 
   projectView.handleSidebarFilter = function(){
     /***Keep sidebar fixed on scroll***/
-    var offset = $('#sidebar').offset();
-    $(window).on('scroll', function(){
-      if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
-        $('#sidebar').stop().css('top', (offset.top * 0.5));
-      } else if ($(window).scrollTop() > offset.top){
-        $('#sidebar').stop().css('top', 0);
-      } else {
-        //($(window).scrollTop() < (offset.top * 0.5))
-        $('#sidebar').stop().css('top', offset.top);
-      }
-    });
+    // var offset = $('#sidebar').offset();
+    // $(window).on('scroll', function(){
+    //   if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
+    //     $('#sidebar').stop().css('top', (offset.top * 0.5));
+    //   } else if ($(window).scrollTop() > offset.top){
+    //     $('#sidebar').stop().css('top', 0);
+    //   } else {
+    //     //($(window).scrollTop() < (offset.top * 0.5))
+    //     $('#sidebar').stop().css('top', offset.top);
+    //   }
+    // });
     /***Hide/show articles when a category in the sidebar is clicked***/
     $('#sidebar').on('click', 'a', function(){
       event.preventDefault();
@@ -89,9 +95,7 @@
         $('article').show();
       }
       /***Highlight sidebar nav for selected category***/
-      $('.sidebarLink').each(function(){
-        $(this).removeClass('active-sidebar');
-      });
+      $('.sidebarLink').removeClass('active-sidebar');
       $(clickedLink).addClass('active-sidebar');
     });
   };
