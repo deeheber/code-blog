@@ -16,16 +16,16 @@
     });
   };
 
-  projectView.populateFilters = function(){
-    /*** Populate filters using a Handlebars template ***/
-    var source = $('#filter-template').html();
-    var filterTemplate = Handlebars.compile(source);
+  projectView.populateCategories = function(){
+    /*** Populate category dropdown and sidebar using a Handlebars template ***/
+    var dropdownTemplate = Handlebars.compile($('#dropdown-template').html());
+    var sidebarTemplate =Handlebars.compile($('#sidebar-template').html());
 
     var content = {
       filter: [ ]
     };
 
-    /***Scan through categories in projectData and populate the drop down choices***/
+    /***Scan through categories in projectData and populate the categories***/
     $('article').each(function(){
       var value = $(this).data('category');
       /*** Checking to see if the value already exists in the array ***/
@@ -34,8 +34,11 @@
       }
     });
 
-    var compiledHtml = filterTemplate(content);
-    $('#category-filter').append(compiledHtml);
+    var dropdownHtml = dropdownTemplate(content);
+    var sidebarHtml = sidebarTemplate(content);
+
+    $('#category-filter').append(dropdownHtml);
+    $('#sidebar-filter').append(sidebarHtml);
     /*** End handlebars code ***/
 
   };
@@ -135,8 +138,7 @@
     });
 
     /*** Build handlebars template and append to the DOM ***/
-    var statsTemplateScript = $('#stats-template').html();
-    var statsTemplate = Handlebars.compile(statsTemplateScript);
+    var statsTemplate = Handlebars.compile($('#stats-template').html());
     var statsContent = {
       'postNum': Post.all.length,
       'postWordTotal': wordTotal,
@@ -157,7 +159,7 @@
 
     projectView.initStats();
     projectView.handleNavTabs();
-    projectView.populateFilters();
+    projectView.populateCategories();
     projectView.handleCategoryFilter();
     projectView.handleSidebarFilter();
     projectView.setPreview();
