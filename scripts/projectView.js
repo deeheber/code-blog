@@ -9,25 +9,23 @@
       var tabId = $(this).data('tab');
       /*** Show/hide the correct tab ***/
       $('#'+ tabId).show();
-      $('#'+ tabId).show().siblings().hide();
-      /*** Underline active tab***/
-      $('.tabLink').each(function(){
-        $(this).removeClass('active');
-      });
+      $('#'+ tabId).siblings().hide();
+      /*** Highlight active tab***/
+      $('.tabLink').removeClass('active');
       $(clickedLink).addClass('active');
     });
   };
 
-  projectView.populateFilters = function(){
-    /*** Populate filters using a Handlebars template ***/
-    var source = $('#filter-template').html();
-    var filterTemplate = Handlebars.compile(source);
+  projectView.populateCategories = function(){
+    /*** Populate category dropdown and sidebar using a Handlebars template ***/
+    var dropdownTemplate = Handlebars.compile($('#dropdown-template').html());
+    var sidebarTemplate =Handlebars.compile($('#sidebar-template').html());
 
     var content = {
       filter: [ ]
     };
 
-    /***Scan through categories in projectData and populate the drop down choices***/
+    /***Scan through categories in projectData and populate the categories***/
     $('article').each(function(){
       var value = $(this).data('category');
       /*** Checking to see if the value already exists in the array ***/
@@ -36,8 +34,11 @@
       }
     });
 
-    var compiledHtml = filterTemplate(content);
-    $('#category-filter').append(compiledHtml);
+    var dropdownHtml = dropdownTemplate(content);
+    var sidebarHtml = sidebarTemplate(content);
+
+    $('#category-filter').append(dropdownHtml);
+    $('#sidebar-filter').append(sidebarHtml);
     /*** End handlebars code ***/
 
   };
@@ -56,6 +57,57 @@
         /***Show all posts if the first item in the dropdown is selected***/
         $('article').show();
       }
+      /***Highlight sidebar nav for selected category in case the window is resized***/
+      $('.sidebarLink').removeClass('active-sidebar');
+      $('.sidebarLink').each(function(){
+        if($(this).data('category') == selectedOption){
+          $(this).addClass('active-sidebar');
+        }
+      });
+
+    });
+  };
+
+  projectView.handleSidebarFilter = function(){
+    /***Keep sidebar fixed on scroll***/
+    // var offset = $('#sidebar').offset();
+    // $(window).on('scroll', function(){
+    //   if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
+    //     $('#sidebar').stop().css('top', (offset.top * 0.5));
+    //   } else if ($(window).scrollTop() > offset.top){
+    //     $('#sidebar').stop().css('top', 0);
+    //   } else {
+    //     //($(window).scrollTop() < (offset.top * 0.5))
+    //     $('#sidebar').stop().css('top', offset.top);
+    //   }
+    // });
+    /***Hide/show articles when a category in the sidebar is clicked***/
+    $('#sidebar').on('click', 'a', function(){
+      event.preventDefault();
+      var clickedLink = event.target;
+      var selectedOption = $(this).data('category');
+      if(selectedOption){
+        $('article').hide().each(function(){
+          if($(this).data('category') == selectedOption){
+            $(this).show();
+          }
+        });
+      }
+      else {
+        /***Show all posts if the first item in the dropdown is selected***/
+        $('article').show();
+      }
+      /***Highlight sidebar nav link for selected category***/
+      $('.sidebarLink').removeClass('active-sidebar');
+      $(clickedLink).addClass('active-sidebar');
+
+      /***Change drop down filter that appears on smaller screens in case the window size is changed***/
+      $('#category-filter').children().each(function(){
+        $(this).removeAttr('selected');
+        if($(this).val() == selectedOption){
+          $(this).attr('selected', true);
+        }
+      });
     });
   };
 
@@ -86,8 +138,7 @@
     });
 
     /*** Build handlebars template and append to the DOM ***/
-    var statsTemplateScript = $('#stats-template').html();
-    var statsTemplate = Handlebars.compile(statsTemplateScript);
+    var statsTemplate = Handlebars.compile($('#stats-template').html());
     var statsContent = {
       'postNum': Post.all.length,
       'postWordTotal': wordTotal,
@@ -108,8 +159,9 @@
 
     projectView.initStats();
     projectView.handleNavTabs();
-    projectView.populateFilters();
+    projectView.populateCategories();
     projectView.handleCategoryFilter();
+    projectView.handleSidebarFilter();
     projectView.setPreview();
   };
   module.projectView = projectView;

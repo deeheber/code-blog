@@ -27,9 +27,15 @@
       </script>
 
       <!-- Handlebars template for filter drop down menus -->
-      <script id="filter-template" type="text/x-handlebars-template">
+      <script id="dropdown-template" type="text/x-handlebars-template">
         {{#each filter}}
           <option value="{{this}}">{{this}}</option>
+        {{/each}}
+      </script>
+
+      <script id="sidebar-template" type="text/x-handlebars-template">
+        {{#each filter}}
+          <li><a href="" data-category = "{{this}}" class="sidebarLink">{{this}}</a></li>
         {{/each}}
       </script>
 
@@ -63,12 +69,19 @@
         <div>
           <!-- Begin home tab -->
           <div id="home" >
+            <div id="sidebar">
+              <ul id="sidebar-filter">
+                <li><a href="" data-category = "" class="active-sidebar sidebarLink">All Categories</a></li>
+              </ul>
+            </div>
+            <div id="content">
           <!-- Category filter drop down select menu -->
-            <select id="category-filter">
-              <option value="">Filter By Category</option>
-            </select>
-            <section id="articles">
-            </section>
+              <select id="category-filter">
+                <option value="">Filter By Category</option>
+              </select>
+              <section id="articles">
+              </section>
+            </div>
           </div>
           <!-- Begin About Tab -->
           <div id="about" class="tab">

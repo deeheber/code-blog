@@ -56,11 +56,13 @@
         var oldETag = localStorage.eTag;
 
         if (oldETag == newETag) {
+          // console.log('loading from local');
           /***file wasn't modified so use cached version***/
           Post.loadAll(JSON.parse(localStorage.sourceData));
           callback();
         }
         else {
+          // console.log('loading from remote');
           /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
           localStorage.setItem('eTag', newETag);
           $.ajax('/scripts/projectData.json').done(function(returnedObj){

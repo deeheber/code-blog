@@ -1,6 +1,7 @@
 header, footer {
   padding: 1em;
   text-align: center;
+  clear: right;
 }
 
 button {
@@ -11,6 +12,16 @@ main {
   padding: 1em;
   margin: auto;
   width: 80%;
+  overflow: hidden;
+}
+
+#content {
+  width: 100%;
+}
+
+#sidebar {
+  display: none;
+  width: 0%;
 }
 
 #category-filter {
@@ -30,4 +41,25 @@ h2 {
 
 img {
   max-width: 100%;
+}
+
+@media all and (min-width:770px){
+  #content {
+    width: 80%;
+    float: left;
+  }
+
+#category-filter{
+  display: none;
+}
+
+  #sidebar {
+    display: block;
+    width: 20%;
+    float: right;
+    /*position: fixed;
+    margin-left: 62%;*/
+    /*top:0;
+    overflow-y:auto; */
+  }
 }

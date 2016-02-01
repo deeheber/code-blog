@@ -1,61 +1,13 @@
-/******  Navigation Styles  ******/
-
-  /*** For the Hamburger and X icon ***/
-button {
-  background-color: rgb(44, 51, 57);
-  border: none;
-}
-
-#main-nav {
-  background-color: rgb(240,240,240);
-  display: none; /* Hide the main nav on initial page load for mobile */
-  font-family: 'PT Sans', sans-serif;
-}
-
-#main-nav ul {
-  padding-left: 0;
-}
-
-#main-nav ul a {
-  text-decoration: none;
-  letter-spacing: 0.07em;
-}
-
-#main-nav ul li {
-  font-size: 1.2em;
-  border-bottom: 1px solid rgb(44, 51, 57);
-  list-style-type: none;
-  padding: 2%;
-}
-
-/***  Media queries for nav on desktop screens ***/
-@media (min-width: 770px) {
-  #hamburger, #cross {
-    display: none;
-  }
-
-  #main-nav {
-    display: block;
-    background-color: rgb(44, 51, 57);
-  }
-
-  #main-nav ul li {
-    display: inline-block;
-    border: none;
-    padding: 0.7%;
-  }
-
-  #main-nav ul li a {
-    color: rgb(240, 240, 240);
-  }
-}
-/***   End of top nav styles ***/
-
 /*** Changes the cursor from an arrow to a hand when hovering over one ***/
 a {
   cursor: pointer;
 }
 /*** Underlines the active tab ***/
 .active {
-  text-decoration: underline !important;
+  /*text-decoration: underline !important;*/
+  color: #808080 !important;
+}
+
+.active-sidebar {
+  color: rgb(240,240,240) !important;
 }
