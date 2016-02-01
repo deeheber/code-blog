@@ -62,6 +62,10 @@ button {
   padding: 2%;
 }
 
+#cross {
+  display: none;
+}
+
 /***  Media queries for nav on desktop screens ***/
 @media (min-width: 770px) {
   #hamburger, #cross {
