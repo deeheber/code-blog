@@ -67,7 +67,7 @@ button {
 }
 
 /***  Media queries for nav on desktop screens ***/
-@media (min-width: 770px) {
+@media all and (min-width: 770px) {
   #hamburger, #cross {
     display: none;
   }
