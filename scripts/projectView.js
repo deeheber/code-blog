@@ -1,21 +1,6 @@
 (function(module) {
   var projectView = {};
 
-  projectView.handleNavTabs = function(){
-    $('.tab').hide();
-    $('#main-nav').on('click', '.tabLink', function(event){
-      event.preventDefault();
-      var clickedLink = event.currentTarget;
-      var tabId = $(this).data('tab');
-      /*** Show/hide the correct tab ***/
-      $('#'+ tabId).show();
-      $('#'+ tabId).siblings().hide();
-      /*** Highlight active tab***/
-      $('.tabLink').removeClass('active');
-      $(clickedLink).addClass('active');
-    });
-  };
-
   projectView.populateCategories = function(){
     /*** Populate category dropdown and sidebar using a Handlebars template ***/
     var dropdownTemplate = Handlebars.compile($('#dropdown-template').html());
@@ -159,7 +144,6 @@
     $('#articles').append(postHtml);
 
     projectView.initStats();
-    //projectView.handleNavTabs();
     projectView.populateCategories();
     projectView.handleCategoryFilter();
     projectView.handleSidebarFilter();
