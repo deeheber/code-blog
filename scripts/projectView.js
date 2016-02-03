@@ -155,10 +155,11 @@
       return content.toHtml();
     });
 
+
     $('#articles').append(postHtml);
 
     projectView.initStats();
-    projectView.handleNavTabs();
+    //projectView.handleNavTabs();
     projectView.populateCategories();
     projectView.handleCategoryFilter();
     projectView.handleSidebarFilter();
