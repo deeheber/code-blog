@@ -2,8 +2,8 @@
   var homeController = {};
 
   homeController.index = function(){
-    /*** Load Article Data from JSON??? ***/
-
+    /*** Load Article Data into HTML ***/
+    
     /*** Fix the view for the page ***/
     $('main > div').hide();
     $('#home').show();
