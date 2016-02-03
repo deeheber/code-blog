@@ -8,7 +8,8 @@
     $('main > div').hide();
     $('#home').show();
     /*** If href = / then make that nav link .active ***/
-
+    $('a').removeClass('active');
+    $('a[href$="/"]').addClass('active');
   };
 
   module.homeController = homeController;
