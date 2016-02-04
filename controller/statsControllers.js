@@ -1,11 +1,11 @@
 (function(module){
   var statsController = {};
 
-  /*** Loads Data into the HTML for the stats page content ***/
-  /*** add projectView.initStats(); here ?***/
-
-
   statsController.index = function(){
+    /*** Loads Data into the HTML for the stats page content ***/
+    /*** add projectView.initStats(); here ?***/
+    Post.fetchAll(projectView.initStats);
+
     /*** Show/hide the correct sections ***/
     $('main > div').hide();
     $('#stats').show();
