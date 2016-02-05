@@ -3,7 +3,7 @@
 
   gitHubController.index = function(){
     /*** Call to GitHub's API to load and print out info ***/
-    
+
     /*** View for the page ***/
     $('main > div').hide();
     $('#github').show();
@@ -11,7 +11,5 @@
     $('a').removeClass('active');
     $('a[href$="/github"]').addClass('active');
   };
-
   module.gitHubController = gitHubController;
-
 })(window);
