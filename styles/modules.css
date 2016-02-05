@@ -2,7 +2,7 @@
   font-size: 1.3em;
 }
 
-article, #about, #stats {
+article, #about, #stats, #github {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;
   background-color: 	rgb(240,240,240);
