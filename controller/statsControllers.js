@@ -2,7 +2,9 @@
   var statsController = {};
 
   statsController.index = function(){
-    /***Will run if the user navigates directly to the /stats page***/
+    /*** Loads Data into the HTML for the stats page content ***/
+    /*** add projectView.initStats(); here ?***/
+    Post.fetchAll(projectView.initStats);
 
     /*** Show/hide the correct sections ***/
     $('main > div').hide();

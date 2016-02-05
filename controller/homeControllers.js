@@ -1,10 +1,13 @@
 (function(module){
   var homeController = {};
 
+
+  topNav.handleNav();
+
   homeController.index = function(){
     /*** Load Article Data into HTML ***/
-    
-    /*** Fix the view for the page ***/
+    Post.fetchAll(projectView.initHomePage);
+    /*** view for the page ***/
     $('main > div').hide();
     $('#home').show();
     /*** If href = / then make that nav link .active ***/
