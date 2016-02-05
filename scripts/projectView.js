@@ -1,22 +1,14 @@
 (function(module) {
   var projectView = {};
 
-  projectView.handleNavTabs = function(){
-    $('.tab').hide();
-    $('#main-nav').on('click', '.tabLink', function(event){
-      event.preventDefault();
-      var clickedLink = event.currentTarget;
-      var tabId = $(this).data('tab');
-      /*** Show/hide the correct tab ***/
-      $('#'+ tabId).show();
-      $('#'+ tabId).siblings().hide();
-      /*** Highlight active tab***/
-      $('.tabLink').removeClass('active');
-      $(clickedLink).addClass('active');
-    });
-  };
-
   projectView.populateCategories = function(){
+    /*** Clears out the sidebar and drop down filter if the page is reloaded to prevent duplicates ***/
+    $('#category-filter').children().not(':first').remove();
+    $('#sidebar-filter').children().not(':first').remove();
+
+    /*** Make sure 'All Categories' is white by default when navigating to '/' ***/
+    $('.sidebarLink').addClass('active-sidebar');
+
     /*** Populate category dropdown and sidebar using a Handlebars template ***/
     var dropdownTemplate = Handlebars.compile($('#dropdown-template').html());
     var sidebarTemplate =Handlebars.compile($('#sidebar-template').html());
@@ -130,6 +122,9 @@
   };
 
   projectView.initStats = function(){
+    /*** Clears out prior stats content if the '/stats' page was already visited ***/
+    $('#stats_content').empty();
+
     /*** Calc total num words in all posts ***/
     var wordTotal = Post.all.map(function(post){
       return post.body.match(/\b\w+/g).length;
@@ -150,15 +145,13 @@
   };
 
   projectView.initHomePage = function(){
+    /*** Clear articles from page if / was already loaded ***/
+    $('#articles').empty();
     /*** Writes blog posts to the page and enables views ***/
-    var postHtml = Post.all.map(function(content){
-      return content.toHtml();
+    Post.all.forEach(function(content){
+      $('#articles').append(content.toHtml());
     });
 
-    $('#articles').append(postHtml);
-
-    projectView.initStats();
-    projectView.handleNavTabs();
     projectView.populateCategories();
     projectView.handleCategoryFilter();
     projectView.handleSidebarFilter();
