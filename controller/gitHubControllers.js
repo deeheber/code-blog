@@ -1,8 +1,10 @@
 (function(module){
-
   var gitHubController = {};
 
   gitHubController.index = function(){
+    /*** Call to GitHub's API to load and print out info ***/
+    
+    /*** View for the page ***/
     $('main > div').hide();
     $('#github').show();
     /*** If href = /about then make that nav link .active ***/
