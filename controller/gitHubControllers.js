@@ -3,7 +3,7 @@
 
   gitHubController.index = function(){
     /*** Call to GitHub's API to load and print out info ***/
-
+    repos.fetchAll(repoView.index);
     /*** View for the page ***/
     $('main > div').hide();
     $('#github').show();

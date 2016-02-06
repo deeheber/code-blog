@@ -9,7 +9,7 @@
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken },
       success: function(data, message, xhr){
-        console.log(data);
+        //console.log(data);
         repos.all = data;
       }
     }).done(callback);
