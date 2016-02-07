@@ -97,7 +97,8 @@
       $('#category-filter').children().each(function(){
         $(this).removeAttr('selected');
         if($(this).val() == selectedOption){
-          $(this).attr('selected', true);
+          /*** Fixed for Safari compatability ***/
+          $(this).prop('selected', true);
         }
       });
     });
