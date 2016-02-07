@@ -74,8 +74,8 @@
     //   }
     // });
     /***Hide/show articles when a category in the sidebar is clicked***/
-    $('#sidebar').on('click', 'a', function(){
-      event.preventDefault();
+    $('#sidebar').on('click', 'a', function(event){
+      event.preventDefault(event);
       var clickedLink = event.target;
       var selectedOption = $(this).data('category');
       if(selectedOption){
@@ -97,7 +97,8 @@
       $('#category-filter').children().each(function(){
         $(this).removeAttr('selected');
         if($(this).val() == selectedOption){
-          $(this).attr('selected', true);
+          /*** Fixed for Safari compatability ***/
+          $(this).prop('selected', true);
         }
       });
     });
@@ -109,7 +110,7 @@
     /***add event handler to display the full post body on click here***/
     $('article').on('click', '.read_more ', function(event){
       var clickedLink = $(this);
-      event.preventDefault();
+      event.preventDefault(event);
       $(this).parent().find('.post_body *:nth-of-type(n+2)').slideToggle(function(){
         if($(this).is(':visible')){
           clickedLink.html('<a>Read Less</a>');

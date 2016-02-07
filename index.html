@@ -60,7 +60,7 @@
             <li><a data-tab="about" href="/about">About</a></li>
             <li><a data-tab="stats" href="/stats">Stats</a></li>
             <li><a href="https://www.linkedin.com/in/daheber" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/deeheber" target="_blank">GitHub</a></li>
+            <li><a data-tab="github" href="/github">GitHub</a></li>
           </ul>
         </nav>
       </header>
@@ -97,6 +97,11 @@
             <p>There really isn't really a ton of overly relevant info here, but I just thought it would be fun to experiment a bit with a few JavaScript functions to calculate stats about the content within the blog.</p>
             <div id="stats_content"></div>
           </div>
+          <!-- Begin github tab -->
+          <div id="github">
+            <h2>Check out my projects on GitHub</h2>
+              <ul id="repoList"></ul>
+          </div>
       </main>
       <footer>
         &copy; 2015 Danielle H.
@@ -106,13 +111,18 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
         <script src="/vendor/page.js"></script>
 
+        <script src="/scripts/token.js"></script>
+
         <script type="text/javascript" src="/scripts/project.js"></script>
         <script type="text/javascript" src="/scripts/projectView.js"></script>
+        <script type="text/javascript" src="/scripts/repo.js"></script>
+        <script type="text/javascript" src="/scripts/repoView.js"></script>
         <script type="text/javascript" src="/scripts/topNav.js"></script>
 
         <script src="/controller/homeControllers.js"></script>
         <script src="/controller/aboutControllers.js"></script>
         <script src="/controller/statsControllers.js"></script>
+        <script src="/controller/gitHubControllers.js"></script>
         <script src="/controller/routes.js"></script>
     </body>
   </html>

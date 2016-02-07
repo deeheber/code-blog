@@ -1,7 +1,6 @@
 (function(module){
   var homeController = {};
 
-
   topNav.handleNav();
 
   homeController.index = function(){
