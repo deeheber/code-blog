@@ -4,6 +4,15 @@
   repos.all = [];
   repos.noForkRepos = [];
 
+  /*** Exclude forked repos from the list ***/
+  repos.excludeForkedRepos = function(array){
+    repos.noForkRepos = array.filter(function(item){
+      if(item.fork == false){
+        return item;
+      }
+    });
+  };
+
   /*** Sorts repos by the last git push date ***/
   repos.loadAll = function(data){
     data.sort(function(a,b) {
@@ -17,17 +26,10 @@
       url: '/github/users/deeheber/repos',
       type: 'GET',
       success: function(data, message, xhr){
-        //console.log(data);
         repos.all = data;
       }
     }).done(function(){
-      /*** Exclude forked repos from the list ***/
-      repos.noForkRepos = repos.all.filter(function(item){
-        if(item.fork == false){
-          return item;
-        }
-      });
-      //console.log(repos.noForkRepos);
+      repos.excludeForkedRepos(repos.all);
       repos.loadAll(repos.noForkRepos);
       callback();
     });
