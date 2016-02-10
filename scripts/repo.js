@@ -12,9 +12,8 @@
 
   repos.fetchAll = function(callback){
     $.ajax({
-      url: 'https://api.github.com/users/deeheber/repos',
+      url: '/github/users/deeheber/repos',
       type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken },
       success: function(data, message, xhr){
         //console.log(data);
         repos.all = data;
