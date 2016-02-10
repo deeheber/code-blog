@@ -2,12 +2,14 @@
   var repos = {};
 
   repos.all = [];
+  repos.noForkRepos = [];
 
   /*** Sorts repos by the last git push date ***/
   repos.loadAll = function(data){
     data.sort(function(a,b) {
       return (new Date(b.pushed_at)) - (new Date(a.pushed_at));
     });
+
   };
 
   repos.fetchAll = function(callback){
@@ -19,7 +21,14 @@
         repos.all = data;
       }
     }).done(function(){
-      repos.loadAll(repos.all);
+      /*** Exclude forked repos from the list ***/
+      repos.noForkRepos = repos.all.filter(function(item){
+        if(item.fork == false){
+          return item;
+        }
+      });
+      //console.log(repos.noForkRepos);
+      repos.loadAll(repos.noForkRepos);
       callback();
     });
   };
