@@ -2,7 +2,7 @@
 
 This is a blog listing out info about code projects that I've done.
 
-[Live Site Here](https://www.deeheber.com)
+[Live Site Here](http://www.deeheber.com)
 
 ##Directions for use
 1. Download the .zip file
