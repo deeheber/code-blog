@@ -2,25 +2,35 @@
   var repos = {};
 
   repos.all = [];
+  repos.noForkRepos = [];
+
+  /*** Exclude forked repos from the list ***/
+  repos.excludeForkedRepos = function(array){
+    repos.noForkRepos = array.filter(function(item){
+      if(item.fork == false){
+        return item;
+      }
+    });
+  };
 
   /*** Sorts repos by the last git push date ***/
   repos.loadAll = function(data){
     data.sort(function(a,b) {
       return (new Date(b.pushed_at)) - (new Date(a.pushed_at));
     });
+
   };
 
   repos.fetchAll = function(callback){
     $.ajax({
-      url: 'https://api.github.com/users/deeheber/repos',
+      url: '/github/users/deeheber/repos',
       type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken },
       success: function(data, message, xhr){
-        //console.log(data);
         repos.all = data;
       }
     }).done(function(){
-      repos.loadAll(repos.all);
+      repos.excludeForkedRepos(repos.all);
+      repos.loadAll(repos.noForkRepos);
       callback();
     });
   };

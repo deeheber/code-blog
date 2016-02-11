@@ -11,7 +11,7 @@
 
     /*** Write repos to the list ***/
     $('#repoList').append(
-      repos.all.map(content)
+      repos.noForkRepos.map(content)
     );
   };
   module.repoView = repoView;

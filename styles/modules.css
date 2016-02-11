@@ -88,3 +88,8 @@ button {
   }
 }
 /***   End of top nav styles ***/
+
+/*** Github Page Repo List styles ***/
+#repoList {
+  text-transform: capitalize;
+}
