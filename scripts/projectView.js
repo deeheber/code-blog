@@ -61,18 +61,6 @@
   };
 
   projectView.handleSidebarFilter = function(){
-    /***Keep sidebar fixed on scroll***/
-    // var offset = $('#sidebar').offset();
-    // $(window).on('scroll', function(){
-    //   if($(window).scrollTop() > (offset.top * 0.5) && $(window).scrollTop() < offset.top){
-    //     $('#sidebar').stop().css('top', (offset.top * 0.5));
-    //   } else if ($(window).scrollTop() > offset.top){
-    //     $('#sidebar').stop().css('top', 0);
-    //   } else {
-    //     //($(window).scrollTop() < (offset.top * 0.5))
-    //     $('#sidebar').stop().css('top', offset.top);
-    //   }
-    // });
     /***Hide/show articles when a category in the sidebar is clicked***/
     $('#sidebar').on('click', 'a', function(event){
       event.preventDefault(event);
@@ -122,29 +110,6 @@
     });
   };
 
-  projectView.initStats = function(){
-    /*** Clears out prior stats content if the '/stats' page was already visited ***/
-    $('#stats_content').empty();
-
-    /*** Calc total num words in all posts ***/
-    var wordTotal = Post.all.map(function(post){
-      return post.body.match(/\b\w+/g).length;
-    }).reduce(function(a, b){
-      return a + b;
-    });
-
-    /*** Build handlebars template and append to the DOM ***/
-    var statsTemplate = Handlebars.compile($('#stats-template').html());
-    var statsContent = {
-      'postNum': Post.all.length,
-      'postWordTotal': wordTotal,
-      'avgPostWord': (wordTotal/Post.all.length).toFixed(2)
-    };
-    var compiledHTML = statsTemplate(statsContent);
-
-    $('#stats_content').append(compiledHTML);
-  };
-
   projectView.initHomePage = function(){
     /*** Clear articles from page if / was already loaded ***/
     $('#articles').empty();
@@ -158,5 +123,6 @@
     projectView.handleSidebarFilter();
     projectView.setPreview();
   };
+
   module.projectView = projectView;
 })(window);

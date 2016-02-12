@@ -14,5 +14,10 @@
     $('a[href$="/"]').addClass('active');
   };
 
+  homeController.loadByCategory = function(ctx, next){
+
+    //next();
+  };
+
   module.homeController = homeController;
 })(window);
