@@ -1,12 +1,16 @@
-/***  Routes for Home About Stats ***/
-page('/', homeController.index);
+/***  Routes for Home ***/
+page('/',
+  homeController.loadAll,
+  homeController.index);
 
 /*** Category filter options for home page ***/
 page('/category', '/');
+
 page('/category/:categoryName',
   homeController.loadByCategory,
-  homeController.show);
+  homeController.index);
 
+/*** Route for about and github ***/
 page('/about', aboutController.index);
 page('/github', gitHubController.index);
 

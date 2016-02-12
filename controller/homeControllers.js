@@ -14,8 +14,11 @@
     $('a[href$="/"]').addClass('active');
   };
 
-  homeController.loadByCategory = function(ctx, next){
+  homeController.loadAll = function(ctx, next){
+    //next();
+  };
 
+  homeController.loadByCategory = function(ctx, next){
     //next();
   };
 
