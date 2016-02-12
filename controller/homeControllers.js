@@ -3,21 +3,32 @@
 
   topNav.handleNav();
 
-  homeController.index = function(){
+  homeController.index = function(ctx, next){
     // /*** Load Article Data into HTML ***/
     // Post.fetchAll(projectView.initHomePage);
+
+    projectView.index(ctx.posts);
     // /*** view for the page ***/
-    // $('main > div').hide();
-    // $('#home').show();
+    $('main > div').hide();
+    $('#home').show();
     // /*** If href = / then make that nav link .active ***/
-    // $('a').removeClass('active');
-    // $('a[href$="/"]').addClass('active');
-    console.log('index loaded');
+    $('a').removeClass('active');
+    $('a[href$="/"]').addClass('active');
+
   };
 
   homeController.loadAll = function(ctx, next){
-    console.log('load all works');
-    next();
+    var postData = function(allPosts) {
+      ctx.posts = Post.all;
+      next();
+    };
+
+    if (Post.all.length) {
+      ctx.posts = Post.all;
+      next();
+    } else {
+      Post.fetchAll(postData);
+    }
   };
 
   homeController.loadByCategory = function(ctx, next){
