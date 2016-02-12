@@ -17,6 +17,7 @@
       filter: [ ]
     };
 
+    /*** TODO Refactor so this loops through the Post.all categories ***/
     /***Scan through categories in projectData and populate the categories***/
     $('article').each(function(){
       var value = $(this).data('category');

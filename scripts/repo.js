@@ -2,16 +2,6 @@
   var repos = {};
 
   repos.all = [];
-  repos.noForkRepos = [];
-
-  /*** Exclude forked repos from the list ***/
-  repos.excludeForkedRepos = function(array){
-    repos.noForkRepos = array.filter(function(item){
-      if(item.fork == false){
-        return item;
-      }
-    });
-  };
 
   /*** Sorts repos by the last git push date ***/
   repos.loadAll = function(data){
@@ -29,9 +19,15 @@
         repos.all = data;
       }
     }).done(function(){
-      repos.excludeForkedRepos(repos.all);
-      repos.loadAll(repos.noForkRepos);
-      callback();
+      /*** Filter out repositories that are forks of someone else's***/
+      var excludeForkRepos = repos.all.filter(function(repository){
+        return repository.fork === false;
+      });
+      /*** Sort by most recent push to the repo ***/
+      excludeForkRepos.sort(function(a,b) {
+        return (new Date(b.pushed_at)) - (new Date(a.pushed_at));
+      });
+      callback(excludeForkRepos);
     });
   };
   module.repos = repos;

@@ -1,5 +1,6 @@
 (function(module){
   Post.all = [];
+  Post.filteredCategories = [];
 
   function Post(option){
     this.title = option.title;
@@ -41,6 +42,12 @@
     Post.all = sourceData.map(function(el){
       return new Post(el);
     });
+
+    /*** Empty the Post.selection array and repopulate ***/
+    Post.filteredCategories.length = 0;
+
+    /*** If a category is picked, repopulate the Post.selection array ***/
+    
   };
 
 
