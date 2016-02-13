@@ -11,3 +11,5 @@ This is a blog listing out info about code projects that I've done.
 4. Within token.js add the following
 `var gitHubToken = '[enter your generated github token string here] '; `
 as a note: never publish your GitHub API token anywhere accessibile to the public
+
+[![Stories in Ready](https://badge.waffle.io/deeheber/code-blog.png?label=ready&title=Ready)](http://waffle.io/deeheber/code-blog)
