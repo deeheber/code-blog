@@ -20,7 +20,6 @@
     /***Scan through categories in projectData and populate the categories***/
     Post.all.forEach(function(el){
       var value = el.category;
-      console.log(el.category);
       /*** Checking to see if the value already exists in the array ***/
       if (content.filter.indexOf(value) == -1) {
         content.filter.push(value);
@@ -115,13 +114,14 @@
     /*** Clear articles from page if / was already loaded ***/
     $('#articles').empty();
     /*** Writes blog posts to the page and enables views ***/
+    console.log(selectedPosts);
     selectedPosts.forEach(function(content){
       $('#articles').append(content.toHtml());
     });
 
     projectView.populateCategories();
-    projectView.handleCategoryFilter();
-    projectView.handleSidebarFilter();
+    //projectView.handleCategoryFilter();
+    //projectView.handleSidebarFilter();
     projectView.setPreview();
   };
 

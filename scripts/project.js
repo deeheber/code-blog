@@ -42,15 +42,19 @@
     Post.all = sourceData.map(function(el){
       return new Post(el);
     });
-
-    /*** Empty the Post.selection array and repopulate ***/
-    Post.filteredCategories.length = 0;
-
-    /*** If a category is picked, repopulate the Post.selection array ***/
-    
   };
 
-
+  Post.filterCategory = function(selectedCategory){
+    /*** Empty the Post.selection array ***/
+    Post.filteredCategories.length = 0;
+    console.log (selectedCategory);
+    console.log(Post.filteredCategories);
+    /***  Filter the Post.all down to the selected category  ***/
+    Post.filteredCategories = Post.all.filter(function(arrayItem){
+      return arrayItem.category === selectedCategory;
+    });
+    console.log(Post.filteredCategories);
+  };
 
   Post.fetchAll = function(callback){
       /*** Get eTag to see if the file on the server was changed ***/

@@ -7,11 +7,11 @@
 
       <!-- Stylesheets -->
       <link href='https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/base.css">
-      <link rel="stylesheet" href="styles/layout.css">
-      <link rel="stylesheet" href="styles/modules.css">
-      <link rel="stylesheet" href="styles/state.css">
+      <link rel="stylesheet" href="/styles/normalize.css">
+      <link rel="stylesheet" href="/styles/base.css">
+      <link rel="stylesheet" href="/styles/layout.css">
+      <link rel="stylesheet" href="/styles/modules.css">
+      <link rel="stylesheet" href="/styles/state.css">
       <!-- Icons -->
       <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
@@ -35,7 +35,7 @@
 
       <script id="sidebar-template" type="text/x-handlebars-template">
         {{#each filter}}
-          <li><a href="" data-category = "{{this}}" class="sidebarLink">{{this}}</a></li>
+          <li><a href="/category/{{this}}" class="sidebarLink">{{this}}</a></li>
         {{/each}}
       </script>
     </head>
@@ -62,7 +62,7 @@
           <div id="home">
             <div id="sidebar">
               <ul id="sidebar-filter">
-                <li><a href="" data-category = "" class="active-sidebar sidebarLink">All Categories</a></li>
+                <li><a href="/category" class="active-sidebar sidebarLink">All</a></li>
               </ul>
             </div>
             <div id="content">
