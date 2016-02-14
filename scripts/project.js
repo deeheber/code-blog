@@ -47,13 +47,10 @@
   Post.filterCategory = function(selectedCategory){
     /*** Empty the Post.selection array ***/
     Post.filteredCategories.length = 0;
-    console.log (selectedCategory);
-    console.log(Post.filteredCategories);
     /***  Filter the Post.all down to the selected category  ***/
     Post.filteredCategories = Post.all.filter(function(arrayItem){
       return arrayItem.category === selectedCategory;
     });
-    console.log(Post.filteredCategories);
   };
 
   Post.fetchAll = function(callback){

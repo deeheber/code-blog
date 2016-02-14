@@ -114,7 +114,6 @@
     /*** Clear articles from page if / was already loaded ***/
     $('#articles').empty();
     /*** Writes blog posts to the page and enables views ***/
-    console.log(selectedPosts);
     selectedPosts.forEach(function(content){
       $('#articles').append(content.toHtml());
     });
