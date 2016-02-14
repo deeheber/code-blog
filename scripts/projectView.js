@@ -17,10 +17,10 @@
       filter: [ ]
     };
 
-    /*** TODO Refactor so this loops through the Post.all categories ***/
     /***Scan through categories in projectData and populate the categories***/
-    $('article').each(function(){
-      var value = $(this).data('category');
+    Post.all.forEach(function(el){
+      var value = el.category;
+      console.log(el.category);
       /*** Checking to see if the value already exists in the array ***/
       if (content.filter.indexOf(value) == -1) {
         content.filter.push(value);
