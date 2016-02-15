@@ -32,32 +32,36 @@
     $('#category-filter').append(dropdownHtml);
     $('#sidebar-filter').append(sidebarHtml);
     /*** End handlebars code ***/
-
   };
 
   projectView.handleCategoryFilter = function(){
-    $('#category-filter').on('change', function(){
-      var selectedOption = $(this).val();
-      if(selectedOption){
-        $('article').hide().each(function(){
-          if($(this).data('category') == selectedOption){
-            $(this).show();
-          }
-        });
-      }
-      else {
-        /***Show all posts if the first item in the dropdown is selected***/
-        $('article').show();
-      }
-      /***Highlight sidebar nav for selected category in case the window is resized***/
-      $('.sidebarLink').removeClass('active-sidebar');
-      $('.sidebarLink').each(function(){
-        if($(this).data('category') == selectedOption){
-          $(this).addClass('active-sidebar');
-        }
-      });
-
+    /***  Mobile dropdown event listener ***/
+    $('#category-filter').one('change', function() {
+      var selectedCategory = $(this).val();
+      page('/category/'+selectedCategory);
     });
+    // $('#category-filter').on('change', function(){
+    //   var selectedOption = $(this).val();
+    //   if(selectedOption){
+    //     $('article').hide().each(function(){
+    //       if($(this).data('category') == selectedOption){
+    //         $(this).show();
+    //       }
+    //     });
+    //   }
+    //   else {
+    //     /***Show all posts if the first item in the dropdown is selected***/
+    //     $('article').show();
+    //   }
+    //   /***Highlight sidebar nav for selected category in case the window is resized***/
+    //   $('.sidebarLink').removeClass('active-sidebar');
+    //   $('.sidebarLink').each(function(){
+    //     if($(this).data('category') == selectedOption){
+    //       $(this).addClass('active-sidebar');
+    //     }
+    //   });
+    //
+    // });
   };
 
   projectView.handleSidebarFilter = function(){
@@ -119,7 +123,7 @@
     });
 
     projectView.populateCategories();
-    //projectView.handleCategoryFilter();
+    projectView.handleCategoryFilter();
     //projectView.handleSidebarFilter();
     projectView.setPreview();
   };

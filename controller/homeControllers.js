@@ -4,16 +4,35 @@
   topNav.handleNav();
 
   homeController.index = function(ctx, next){
-    // /*** Load Article Data into HTML ***/
-    // Post.fetchAll(projectView.initHomePage);
+    /*** Load Article Data into HTML ***/
     projectView.index(ctx.posts);
-    // /*** view for the page ***/
+    next();
+  };
+
+  homeController.show = function(ctx, next){
+    /*** view for the tabs and nav ***/
     $('main > div').hide();
     $('#home').show();
-    // /*** If href = / then make that nav link .active ***/
+    /*** If href in the nav = / then make that nav link .active ***/
     $('a').removeClass('active');
-    //$('a[href$="/"]').addClass('active');
-
+    $('li > a[href$="/"]').addClass('active');
+    /*** Change color for active sidebar link ***/
+    $('.sidebarLink').removeClass('active-sidebar');
+    $('.sidebarLink').each(function(){
+      if($(this).data('category') == ctx.params.categoryName){
+        $(this).addClass('active-sidebar');
+      }
+    });
+    if(typeof ctx.params.categoryName === 'undefined'){
+      $('li > a[href$="/category"]').addClass('active-sidebar');
+    }
+    /*** Change select menu option ***/
+    console.log(ctx.params.categoryName);
+    $('#category-filter > option').each(function(){
+      if($(this).val() === ctx.params.categoryName){
+        this.selected = true;
+      }
+    });
   };
 
   homeController.loadAll = function(ctx, next){
@@ -46,7 +65,6 @@
     else {
       Post.fetchAll(categoryData);
     }
-
   };
 
   module.homeController = homeController;

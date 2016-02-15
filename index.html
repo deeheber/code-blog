@@ -35,7 +35,7 @@
 
       <script id="sidebar-template" type="text/x-handlebars-template">
         {{#each filter}}
-          <li><a href="/category/{{this}}" class="sidebarLink">{{this}}</a></li>
+          <li><a href="/category/{{this}}" data-category="{{this}}"class="sidebarLink">{{this}}</a></li>
         {{/each}}
       </script>
     </head>
@@ -62,7 +62,7 @@
           <div id="home">
             <div id="sidebar">
               <ul id="sidebar-filter">
-                <li><a href="/category" class="active-sidebar sidebarLink">All</a></li>
+                <li><a href="/category" data-category="" class="sidebarLink">All</a></li>
               </ul>
             </div>
             <div id="content">

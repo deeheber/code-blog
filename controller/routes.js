@@ -1,14 +1,18 @@
 /***  Routes for Home ***/
 page('/',
   homeController.loadAll,
-  homeController.index);
+  homeController.index,
+  homeController.show
+);
 
 /*** Category filter options for home page ***/
 page('/category', '/');
 
 page('/category/:categoryName',
   homeController.loadByCategory,
-  homeController.index);
+  homeController.index,
+  homeController.show
+);
 
 /*** Route for about and github ***/
 page('/about', aboutController.index);
