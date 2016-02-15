@@ -31,68 +31,31 @@
 
     $('#category-filter').append(dropdownHtml);
     $('#sidebar-filter').append(sidebarHtml);
-    /*** End handlebars code ***/
   };
 
-  projectView.handleCategoryFilter = function(){
-    /***  Mobile dropdown event listener ***/
+  projectView.handleCategoryFilter = function(selectedCategory){
+    /***  Mobile category filter drop down event ***/
     $('#category-filter').one('change', function() {
       var selectedCategory = $(this).val();
       page('/category/'+selectedCategory);
     });
-    // $('#category-filter').on('change', function(){
-    //   var selectedOption = $(this).val();
-    //   if(selectedOption){
-    //     $('article').hide().each(function(){
-    //       if($(this).data('category') == selectedOption){
-    //         $(this).show();
-    //       }
-    //     });
-    //   }
-    //   else {
-    //     /***Show all posts if the first item in the dropdown is selected***/
-    //     $('article').show();
-    //   }
-    //   /***Highlight sidebar nav for selected category in case the window is resized***/
-    //   $('.sidebarLink').removeClass('active-sidebar');
-    //   $('.sidebarLink').each(function(){
-    //     if($(this).data('category') == selectedOption){
-    //       $(this).addClass('active-sidebar');
-    //     }
-    //   });
-    //
-    // });
-  };
 
-  projectView.handleSidebarFilter = function(){
-    /***Hide/show articles when a category in the sidebar is clicked***/
-    $('#sidebar').on('click', 'a', function(event){
-      event.preventDefault(event);
-      var clickedLink = event.target;
-      var selectedOption = $(this).data('category');
-      if(selectedOption){
-        $('article').hide().each(function(){
-          if($(this).data('category') == selectedOption){
-            $(this).show();
-          }
-        });
+    /*** Change color for active sidebar link ***/
+    $('.sidebarLink').removeClass('active-sidebar');
+    $('.sidebarLink').each(function(){
+      if($(this).data('category') == selectedCategory){
+        $(this).addClass('active-sidebar');
       }
-      else {
-        /***Show all posts if the first item in the dropdown is selected***/
-        $('article').show();
-      }
-      /***Highlight sidebar nav link for selected category***/
-      $('.sidebarLink').removeClass('active-sidebar');
-      $(clickedLink).addClass('active-sidebar');
+    });
+    if(typeof selectedCategory === 'undefined'){
+      $('li > a[href$="/category"]').addClass('active-sidebar');
+    }
 
-      /***Change drop down filter that appears on smaller screens in case the window size is changed***/
-      $('#category-filter').children().each(function(){
-        $(this).removeAttr('selected');
-        if($(this).val() == selectedOption){
-          /*** Fixed for Safari compatability ***/
-          $(this).prop('selected', true);
-        }
-      });
+    /*** Change select menu option on URL change or screen resize ***/
+    $('#category-filter > option').each(function(){
+      if($(this).val() === selectedCategory){
+        this.selected = true;
+      }
     });
   };
 
@@ -114,7 +77,7 @@
     });
   };
 
-  projectView.index = function(selectedPosts){
+  projectView.index = function(selectedPosts, selectedCategory){
     /*** Clear articles from page if / was already loaded ***/
     $('#articles').empty();
     /*** Writes blog posts to the page and enables views ***/
@@ -123,8 +86,7 @@
     });
 
     projectView.populateCategories();
-    projectView.handleCategoryFilter();
-    //projectView.handleSidebarFilter();
+    projectView.handleCategoryFilter(selectedCategory);
     projectView.setPreview();
   };
 
