@@ -2,16 +2,6 @@
   var repos = {};
 
   repos.all = [];
-  repos.noForkRepos = [];
-
-  /*** Exclude forked repos from the list ***/
-  repos.excludeForkedRepos = function(array){
-    repos.noForkRepos = array.filter(function(item){
-      if(item.fork == false){
-        return item;
-      }
-    });
-  };
 
   /*** Sorts repos by the last git push date ***/
   repos.loadAll = function(data){
@@ -27,11 +17,20 @@
       type: 'GET',
       success: function(data, message, xhr){
         repos.all = data;
+        /*** Filter out repositories that are forks of someone else's***/
+        var excludeForkRepos = repos.all.filter(function(repository){
+          return repository.fork === false;
+        });
+        /*** Sort by most recent push to the repo ***/
+        excludeForkRepos.sort(function(a,b) {
+          return (new Date(b.pushed_at)) - (new Date(a.pushed_at));
+        });
+        callback(excludeForkRepos);
+      },
+      fail: function(xhr, status, errorThrown){
+        alert('Sorry, the server is unavailable. Please try again later.');
+        callback();
       }
-    }).done(function(){
-      repos.excludeForkedRepos(repos.all);
-      repos.loadAll(repos.noForkRepos);
-      callback();
     });
   };
   module.repos = repos;

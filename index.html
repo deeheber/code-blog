@@ -7,11 +7,11 @@
 
       <!-- Stylesheets -->
       <link href='https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans' rel='stylesheet' type='text/css'>
-      <link rel="stylesheet" href="styles/normalize.css">
-      <link rel="stylesheet" href="styles/base.css">
-      <link rel="stylesheet" href="styles/layout.css">
-      <link rel="stylesheet" href="styles/modules.css">
-      <link rel="stylesheet" href="styles/state.css">
+      <link rel="stylesheet" href="/styles/normalize.css">
+      <link rel="stylesheet" href="/styles/base.css">
+      <link rel="stylesheet" href="/styles/layout.css">
+      <link rel="stylesheet" href="/styles/modules.css">
+      <link rel="stylesheet" href="/styles/state.css">
       <!-- Icons -->
       <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
@@ -35,16 +35,9 @@
 
       <script id="sidebar-template" type="text/x-handlebars-template">
         {{#each filter}}
-          <li><a href="" data-category = "{{this}}" class="sidebarLink">{{this}}</a></li>
+          <li><a href="/category/{{this}}" data-category="{{this}}"class="sidebarLink">{{this}}</a></li>
         {{/each}}
       </script>
-
-      <script id="stats-template" type="text/x-handlebars-template">
-        <p>Total Number of Posts: {{postNum}}</p>
-        <p>Total Number of Words in all Posts: {{postWordTotal}}</p>
-        <p>Average Number of words per post: {{avgPostWord}}</p>
-      </script>
-
     </head>
     <body>
       <header>
@@ -58,7 +51,6 @@
           <ul>
             <li><a data-tab="home" href="/">Home</a></li>
             <li><a data-tab="about" href="/about">About</a></li>
-            <li><a data-tab="stats" href="/stats">Stats</a></li>
             <li><a href="https://www.linkedin.com/in/deeheber" target="_blank">LinkedIn</a></li>
             <li><a data-tab="github" href="/github">GitHub</a></li>
           </ul>
@@ -70,7 +62,7 @@
           <div id="home">
             <div id="sidebar">
               <ul id="sidebar-filter">
-                <li><a href="" data-category = "" class="active-sidebar sidebarLink">All Categories</a></li>
+                <li><a href="/category" data-category="" class="sidebarLink">All</a></li>
               </ul>
             </div>
             <div id="content">
@@ -90,12 +82,6 @@
             <p>Having a strong belief that technology can enrich prople's lives, I've made it my persional mission to contribute everything that I can to help make the web a better place.</p>
             <p>When I'm not dreaming up or building my next project, you can most likely find me enjoying a cup of coffee along with a book.</p>
             <p>Thanks for visiting my site! If you'd like to reach out to me, feel free to contact me via my <a href="http://whatamidoingwithmy.life" target="_blank">personal website</a> or social media links above. </p>
-          </div>
-          <!-- Begin Stats Tab -->
-          <div id="stats">
-            <h2>Stats</h2>
-            <p>There really isn't really a ton of overly relevant info here, but I just thought it would be fun to experiment a bit with a few JavaScript functions to calculate stats about the content within the blog.</p>
-            <div id="stats_content"></div>
           </div>
           <!-- Begin github tab -->
           <div id="github">
@@ -119,7 +105,6 @@
 
         <script src="/controller/homeControllers.js"></script>
         <script src="/controller/aboutControllers.js"></script>
-        <script src="/controller/statsControllers.js"></script>
         <script src="/controller/gitHubControllers.js"></script>
         <script src="/controller/routes.js"></script>
     </body>

@@ -1,5 +1,6 @@
 (function(module){
   Post.all = [];
+  Post.filteredCategories = [];
 
   function Post(option){
     this.title = option.title;
@@ -43,7 +44,14 @@
     });
   };
 
-
+  Post.filterCategory = function(selectedCategory){
+    /*** Empty the Post.selection array ***/
+    Post.filteredCategories.length = 0;
+    /***  Filter the Post.all down to the selected category  ***/
+    Post.filteredCategories = Post.all.filter(function(arrayItem){
+      return arrayItem.category === selectedCategory;
+    });
+  };
 
   Post.fetchAll = function(callback){
       /*** Get eTag to see if the file on the server was changed ***/
