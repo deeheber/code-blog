@@ -32,7 +32,7 @@
     "publishedOn": "2015-12-24",
     "category": "Game",
     "body": "<p>Originally, I built this game to teach myself flow control via if/else statements in JavaScript, but this actually turned into a much larger project.</p><p>I went down the rabbit hole of Google's <a href=\"https://developer.chrome.com/extensions/getstarted/\" target=\"_blank\">developer documentation</a> and realized that building a Chrome extension was much easier than I originally thought.</p><p>Some add ons that I'd like to explore in the future include: adding persistence, so the choices/scores stay in place if you close out of the popup. It would also be neat to refactor this code to be a bit more compact, possibly with a library such as jQuery.</p><p>Technologies used: HTML, CSS, JavaScript, JSON.</p><p><img src=\"/images/rps.png\"/></p>",
-    "projectURL": "https://github.com/deeheber/Rock-Paper-Scissors-Chrome-Extension"
+    "projectURL": "https://chrome.google.com/webstore/detail/rock-paper-scissors/ngdfhjfgdakniamhoodbaljgoaoollok"
   },
   {
     "title": "Portfolio Blog",
