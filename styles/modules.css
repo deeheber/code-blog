@@ -23,6 +23,7 @@ article, #about, #stats, #github {
   font-size: 1.2em;
   font-family: 'PT Sans', sans-serif;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 /***Drop down category filter for mobile view***/
