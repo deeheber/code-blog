@@ -8,6 +8,10 @@ article, #about, #stats, #github {
   background-color: 	rgb(240,240,240);
 }
 
+.external_link a {
+  text-decoration: none;
+}
+
 .read_more a {
   text-decoration: none;
 }
@@ -93,5 +97,10 @@ button {
 
 /*** Github Page Repo List styles ***/
 #repoList {
+  list-style-type: circle;
+}
+
+#repoList a {
   text-transform: capitalize;
+  text-decoration: none;
 }
