@@ -1,5 +1,6 @@
-.lnr-menu, .lnr-cross {
-  font-size: 1.3em;
+#hamburger img, #cross img {
+  height: 1em;
+  display: block;
 }
 
 article, #about, #stats, #github {
