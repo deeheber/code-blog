@@ -100,6 +100,11 @@ button {
 }
 /***   End of top nav styles ***/
 
+/*** About Links ***/
+.aboutLink {
+  text-decoration: none;
+}
+
 /*** Github Page Repo List styles ***/
 #repoList {
   list-style-type: square;
