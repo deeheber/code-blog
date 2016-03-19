@@ -2,6 +2,10 @@
   font-size: 1.3em;
 }
 
+.pageTitle {
+  text-decoration: none;
+}
+
 article, #about, #stats, #github {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;
@@ -97,7 +101,7 @@ button {
 
 /*** Github Page Repo List styles ***/
 #repoList {
-  list-style-type: circle;
+  list-style-type: square;
 }
 
 #repoList a {
