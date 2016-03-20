@@ -18,5 +18,8 @@ page('/category/:categoryName',
 page('/about', aboutController.index);
 page('/github', gitHubController.index);
 
+/***  404 error page ***/
+page('*', notFoundController.index);
+
 /***  Activates page.js ***/
 page();
