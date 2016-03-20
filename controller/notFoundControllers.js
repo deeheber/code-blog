@@ -8,6 +8,5 @@
     $('a').removeClass('active');
   };
 
-
   module.notFoundController = notFoundController;
 })(window);

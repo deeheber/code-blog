@@ -7,7 +7,7 @@
   text-decoration: none;
 }
 
-article, #about, #stats, #github {
+article, #about, #stats, #github, #notFound {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;
   background-color: 	rgb(240,240,240);
