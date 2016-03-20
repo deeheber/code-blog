@@ -33,11 +33,28 @@
   };
 
   homeController.loadByCategory = function(ctx, next){
-    var selectedCategory = ctx.params.categoryName;
+    var selectedCategory = ctx.params.categoryName.toLowerCase();
     var categoryData = function(){
       Post.filterCategory(selectedCategory);
       ctx.posts = Post.filteredCategories;
-      next();
+      /*** Checks if category exists in the posts  ***/
+      var categoryExists = false;
+      var allCategories = Post.all.map(function(item){
+        return item.category;
+      });
+      for(var index=0; index<allCategories.length; index++){
+        if(allCategories[index] == selectedCategory){
+          categoryExists = true;
+          break;
+        }
+      }
+      if(categoryExists == true){
+        next();
+      }
+      else {
+        notFoundController.index();
+      }
+
     };
     /*** Checks Posts are already loaded ***/
     if (Post.all.length){
