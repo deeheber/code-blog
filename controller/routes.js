@@ -7,6 +7,7 @@ page('/',
 
 /*** Category filter options for home page ***/
 page('/category', '/');
+page('/category/all', '/');
 
 page('/category/:categoryName',
   homeController.loadByCategory,
