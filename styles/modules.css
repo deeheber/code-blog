@@ -3,22 +3,10 @@
   display: block;
 }
 
-.pageTitle {
-  text-decoration: none;
-}
-
 article, #about, #stats, #github, #notFound {
   border: 1px solid rgb(44, 51, 57);
   border-radius: 5px;
   background-color: 	rgb(240,240,240);
-}
-
-.external_link a {
-  text-decoration: none;
-}
-
-.read_more a {
-  text-decoration: none;
 }
 
 /***Sidebar category links on larger screens***/
@@ -31,7 +19,6 @@ article, #about, #stats, #github, #notFound {
   color: rgb(44, 51, 57);
   font-size: 1.2em;
   font-family: 'PT Sans', sans-serif;
-  text-decoration: none;
   text-transform: capitalize;
 }
 
@@ -62,7 +49,6 @@ button {
 }
 
 #main-nav ul a {
-  text-decoration: none;
   letter-spacing: 0.07em;
 }
 
@@ -100,11 +86,6 @@ button {
 }
 /***   End of top nav styles ***/
 
-/*** About Links ***/
-.aboutLink {
-  text-decoration: none;
-}
-
 /*** Github Page Repo List styles ***/
 #repoList {
   list-style-type: square;
@@ -112,5 +93,4 @@ button {
 
 #repoList a {
   text-transform: capitalize;
-  text-decoration: none;
 }
