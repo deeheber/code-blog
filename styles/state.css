@@ -20,7 +20,7 @@ a {
 .read_more:before {
   content: "";
   position: absolute;
-  width: 17%;
+  width: 12%;
   height: 2px;
   bottom: 0;
   left: 0;
