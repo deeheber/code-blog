@@ -85,6 +85,11 @@
       $('#articles').append(content.toHtml());
     });
 
+    /*** In case someone typed in the URL with a capital category name  ***/
+    if(selectedCategory){
+      selectedCategory = selectedCategory.toLowerCase();
+    }
+
     projectView.populateCategories();
     projectView.handleCategoryFilter(selectedCategory);
     projectView.setPreview();

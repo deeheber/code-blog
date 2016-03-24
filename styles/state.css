@@ -11,3 +11,29 @@ a {
 .active-sidebar {
   color: rgb(240,240,240) !important;
 }
+
+/*** Underline for read more links on hover ***/
+.read_more {
+  position: relative;
+}
+
+.read_more:before {
+  content: "";
+  position: absolute;
+  width: 12%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #808080;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.read_more:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
