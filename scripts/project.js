@@ -18,13 +18,23 @@
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
     this.dateInfo = this.publishedOn ? 'Published ' + this.daysAgo + ' days ago' : '(draft)';
 
+    /*** Convert date format to MM/DD/YYYY ***/
+    var toMmDdYy = function(input) {
+      var ptrn = /(\d{4})\-(\d{2})\-(\d{2})/;
+      if(!input || !input.match(ptrn)) {
+        return null;
+      }
+      return input.replace(ptrn, '$2/$3/$1');
+    };
+
     var context = {
       'category': this.category,
       'title': this.title,
       'publishedOn': this.publishedOn,
       'projectURL': this.projectURL,
       'body': this.body,
-      'dateInfo': this.dateInfo
+      'dateInfo': this.dateInfo,
+      'formattedDate': toMmDdYy(this.publishedOn)
     };
 
     var theCompiledHml = theTemplate(context);
