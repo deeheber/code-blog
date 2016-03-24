@@ -37,3 +37,45 @@ a {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
+/***  Tool tip for blog dates on hover ***/
+time {
+  cursor: help;
+  position: relative;
+}
+
+time::before, time::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  z-index: -100;
+}
+
+time:hover::before,
+time:focus::before,
+time:hover::after,
+time:focus::after {
+  opacity: 1;
+  z-index: 100;
+}
+
+time::before {
+  border-style: solid;
+  border-width: 1em .75em 0 .75em;
+  border-color: rgb(44, 51, 57) transparent transparent transparent;
+  bottom: 100%;
+  margin-left: -.5em;
+  content: "";
+}
+
+time::after {
+  background: rgb(44, 51, 57);
+  border-radius: .25em;
+  bottom: 180%;
+  color: rgb(240,240,240);
+  width: 15em;
+  padding: 1em;
+  margin-left: -8.75em;
+  text-align: center;
+  content: attr(data-tip);
+}
