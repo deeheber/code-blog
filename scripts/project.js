@@ -16,7 +16,7 @@
 
     /*** Calculation for how long ago a post was created ***/
     this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
-    this.dateInfo = this.publishedOn ? 'Published ' + this.daysAgo + ' days ago' : '(draft)';
+    this.dateInfo = this.daysAgo + ' days ago';
 
     /*** Convert date format to MM/DD/YYYY ***/
     var toMmDdYy = function(input) {
