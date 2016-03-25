@@ -59,6 +59,22 @@
     });
   };
 
+  projectView.fixedCategorySidebar = function(){
+    $(window).on('scroll', function(){
+      var stop = $('#sidebar').offset().top;
+      console.log('sidebar top '+stop); //top 230.59375
+      var documentTop = $(window).scrollTop();
+      console.log('top of document ' + documentTop);
+      if(documentTop >= stop){
+        $('#sidebar').css('position', 'fixed');
+        $('#sidebar').css('top', '0px');
+        $('#sidebar').css('float', 'right');
+        $('#sidebar').css('margin-left', '62%');
+      } 
+
+    });
+  };
+
   projectView.setPreview = function(){
     /*** Display only the first paragraph in the post body ***/
     $('.post_body *:nth-of-type(n+2)').hide();
@@ -92,6 +108,7 @@
 
     projectView.populateCategories();
     projectView.handleCategoryFilter(selectedCategory);
+    projectView.fixedCategorySidebar();
     projectView.setPreview();
   };
 
