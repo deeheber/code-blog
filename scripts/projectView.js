@@ -61,17 +61,20 @@
 
   projectView.fixedCategorySidebar = function(){
     $(window).on('scroll', function(){
-      var stop = $('#sidebar').offset().top;
-      console.log('sidebar top '+stop); //top 230.59375
-      var documentTop = $(window).scrollTop();
-      console.log('top of document ' + documentTop);
-      if(documentTop >= stop){
+      var sidebarTop = $('#sidebar').offset().top;
+      var headerHeight = $('header').height();
+      var scrollPosition = $(window).scrollTop();
+      /*** Fix sidebar when scrolling down ***/
+      if(scrollPosition >= sidebarTop){
         $('#sidebar').css('position', 'fixed');
         $('#sidebar').css('top', '0px');
-        $('#sidebar').css('float', 'right');
         $('#sidebar').css('margin-left', '62%');
-      } 
-
+      }
+      /*** Revert to orginal sidebar styles when scrolling up ***/
+      if(scrollPosition < (headerHeight + 50)){
+        console.log('stop');
+        $('#sidebar').removeAttr('style');
+      }
     });
   };
 
