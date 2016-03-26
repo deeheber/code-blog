@@ -72,7 +72,6 @@
       }
       /*** Revert to orginal sidebar styles when scrolling up ***/
       if(scrollPosition < (headerHeight + 50)){
-        console.log('stop');
         $('#sidebar').removeAttr('style');
       }
     });
