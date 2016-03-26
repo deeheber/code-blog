@@ -1,6 +1,6 @@
 # Danielle's Development Portfolio
 
-This is a blog listing out info about code projects that I've done.
+My blog, where I explore, discover, and chronicle my adventures in learning through coding projects.
 
 [Live Site Here](http://www.deeheber.com)
 
