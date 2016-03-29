@@ -43,6 +43,9 @@ img {
   max-width: 100%;
 }
 
+#profilePicContainer {
+  text-align: center;
+}
 #profilePic {
   width: 10em;
   border-radius: 50%;
@@ -62,9 +65,6 @@ img {
     display: block;
     width: 20%;
     float: right;
-    /*position: fixed;
-    margin-left: 62%;*/
-    /*top:0;
-    overflow-y:auto; */
   }
+  
 }
