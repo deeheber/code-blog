@@ -59,6 +59,24 @@
     });
   };
 
+  projectView.fixedCategorySidebar = function(){
+    $(window).on('scroll', function(){
+      var sidebarTop = $('#sidebar').offset().top;
+      var headerHeight = $('header').height();
+      var scrollPosition = $(window).scrollTop();
+      /*** Fix sidebar when scrolling down ***/
+      if(scrollPosition >= sidebarTop){
+        $('#sidebar').css('position', 'fixed');
+        $('#sidebar').css('top', '0px');
+        $('#sidebar').css('margin-left', '62%');
+      }
+      /*** Revert to orginal sidebar styles when scrolling up ***/
+      if(scrollPosition < (headerHeight + 50)){
+        $('#sidebar').removeAttr('style');
+      }
+    });
+  };
+
   projectView.setPreview = function(){
     /*** Display only the first paragraph in the post body ***/
     $('.post_body *:nth-of-type(n+2)').hide();
@@ -92,6 +110,7 @@
 
     projectView.populateCategories();
     projectView.handleCategoryFilter(selectedCategory);
+    projectView.fixedCategorySidebar();
     projectView.setPreview();
   };
 
