@@ -48,7 +48,7 @@ img {
 }
 #profilePic {
   width: 10em;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 @media all and (min-width:770px){
@@ -57,14 +57,14 @@ img {
     float: left;
   }
 
-#category-filter{
-  display: none;
-}
+  #category-filter{
+    display: none;
+  }
 
   #sidebar {
     display: block;
     width: 20%;
     float: right;
   }
-  
+
 }
