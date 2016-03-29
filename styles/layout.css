@@ -43,6 +43,11 @@ img {
   max-width: 100%;
 }
 
+#profilePic {
+  width: 10em;
+  border-radius: 50%;
+}
+
 @media all and (min-width:770px){
   #content {
     width: 80%;
