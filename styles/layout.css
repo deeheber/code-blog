@@ -43,23 +43,33 @@ img {
   max-width: 100%;
 }
 
+#profilePic {
+  width: 10em;
+  border-radius: 5px;
+}
+
+#profilePicContainer {
+  text-align: center;
+}
+
 @media all and (min-width:770px){
   #content {
     width: 80%;
     float: left;
   }
 
-#category-filter{
-  display: none;
-}
+  #category-filter{
+    display: none;
+  }
 
   #sidebar {
     display: block;
     width: 20%;
     float: right;
-    /*position: fixed;
-    margin-left: 62%;*/
-    /*top:0;
-    overflow-y:auto; */
+  }
+
+  #profilePicContainer {
+    float: right;
+    padding: 1%;
   }
 }
