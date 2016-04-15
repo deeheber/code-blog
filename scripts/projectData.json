@@ -47,5 +47,12 @@
     "category": "collaboration",
     "body": "<p>I was outraged when my bicycle seat was stolen. After discussing this problem with a few colleagues, we found that others also had similiar experiences. We decided to combine our efforts and talents to build out a solution on our own.</p><p>This app was built with a mobile first apprach with the angle that cyclists in Portland, OR would be using this while on the go. The heart of the application is the map in which we customized using the Google Maps JavaScript API. Some features of the map include a heatmap that shows simulated crime data, bicycle parking locations, and a location finder. We also had the vision of creating a small peer to peer community and added a discussion board using Disqus.</p><p>My primary contributions indcluded adding the user interactivity to hide/show the different data layers for the map and also adding in the functions to build those custom data layers.</p><p>Some enhancements we'd like to add in the 2.0 version include obtaining data sources from the Portland Police in order to dynamically populate that data. One of the biggest challenges while building this was being able to get access to accurate data with enough data points to build out a heatmap, so the current version is simulated data based off of data points from <a href=\"http://www.civicapps.org\" target=\"_blank\">civicapps.org</a>.</p><p><img src=\"/images/bikebright.png\"/></p>",
     "projectURL": "https://bikebright.herokuapp.com/"
+  },
+  {
+    "title": "To Do List",
+    "publishedOn": "2016-04-14",
+    "category": "tooling",
+    "body": "<p>A minimal to do list that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript.</p></p><p><img src=\"/images/todolist.png\"/></p>",
+    "projectURL": "http://deeheber.github.io/to-do-list/"
   }
 ]
