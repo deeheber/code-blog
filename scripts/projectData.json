@@ -54,5 +54,12 @@
     "category": "tooling",
     "body": "<p>A minimal to do list that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript.</p></p><p><img src=\"/images/todolist.png\"/></p>",
     "projectURL": "http://deeheber.github.io/to-do-list/"
+  },
+  {
+    "title": "Node Weather",
+    "publishedOn": "2016-06-07",
+    "category": "tooling",
+    "body": "<p>A console app that retrieves weather information when the user enters a location. Created using node.js. More detailed usage insructions can be found in the readme file on the GitHub repo.</p></p><p><img src=\"/images/nodeWeather.gif\"/></p>",
+    "projectURL": "https://github.com/deeheber/node-weather"
   }
 ]
