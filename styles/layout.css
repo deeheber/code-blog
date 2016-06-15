@@ -2,6 +2,7 @@ header, footer {
   padding: 1em;
   text-align: center;
   clear: right;
+  width: 100%;
 }
 
 button {

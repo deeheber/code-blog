@@ -86,21 +86,18 @@ button {
 }
 
 /*** Sticky footer on larger screens ***/
-@media all and (min-width: 740px){
-  html {
-    position: relative;
-    min-height: 100%;
-  }
-  body {
-    margin: 0 0 50px; /* bottom = footer height */
-  }
-  footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-  }
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 60px;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
 }
 
 /*** Github Page Repo List styles ***/
