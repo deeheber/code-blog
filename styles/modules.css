@@ -84,7 +84,24 @@ button {
     color: rgb(240, 240, 240);
   }
 }
-/***   End of top nav styles ***/
+
+/*** Sticky footer on larger screens ***/
+@media all and (min-width: 740px){
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin: 0 0 50px; /* bottom = footer height */
+  }
+  footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+  }
+}
 
 /*** Github Page Repo List styles ***/
 #repoList {
