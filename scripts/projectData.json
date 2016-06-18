@@ -3,7 +3,7 @@
     "title": "About Me Site",
     "publishedOn": "2015-11-15",
     "category": "website",
-    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>Disclaimer: This project does not necessarily reflect my current abilities. It's a nice reminder of how far I've come. I'd love to revisit this at a later date to improve the navigation design (specifically for mobile) and game interface.</p>  <p>Technologies used: HTML, CSS, JavaScript.</p><p><img src=\"/images/aboutme.png\"/></p>",
+    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>Currently working on refactoring the code since I've gained some knowledge since.</p>  <p>Technologies used: HTML, CSS, JavaScript, and jQuery.</p><p><img src=\"/images/aboutme.png\"/></p>",
     "projectURL": "http://deeheber.github.io/About-Me/index.html"
   },
   {
