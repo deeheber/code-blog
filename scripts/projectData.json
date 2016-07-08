@@ -4,7 +4,7 @@
     "publishedOn": "2015-11-15",
     "category": "website",
     "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>I'm currently utilizing this old project as a learning opportunity by refactoring my past code.</p>  <p>Technologies used: HTML, CSS, JavaScript, and jQuery.</p><p><img src=\"/images/aboutme.png\"/></p>",
-    "projectURL": "http://deeheber.github.io/About-Me/index.html"
+    "projectURL": "http://deeheber.github.io/About-Me/"
   },
   {
     "title": "Donut Shop",
