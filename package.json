@@ -1,12 +1,12 @@
 {
   "name": "code-blog",
   "version": "1.0.0",
-  "description": "This is my first Heroku app. A portfolio blog with my development projects.",
+  "description": "This is a blog that lists out my development projects.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "Danielle H",
+  "author": "Danielle Heberling",
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.3",

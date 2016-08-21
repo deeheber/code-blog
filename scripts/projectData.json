@@ -68,5 +68,12 @@
     "category": "server",
     "body": "<p>A single resource CRUD API using Node, Koa, Mongoose, and MongoDB. I embarked on this project because I was curious what buildiing an API would look like without the use of Express.</p><p>More detailed usage insructions for use can be found in the readme file on the GitHub repository.</p><p>Coming sometime in the future: a front end to make API calls through a browser.</p>",
     "projectURL": "https://github.com/deeheber/koa-app"
+  },
+  {
+    "title": "Escape from Corporate America",
+    "publishedOn": "2016-08-21",
+    "category": "game",
+    "body": "<p>A text adventure game inspired by the American TV adaptation of 'The Office.' Can you escape from work early without your boss's knowledge to meet your top pal at the Pabst Music Festival???</p><p>This game was built using AngularJS, Express, and Webpack.</p><p><img src=\"/images/textGame.png\"/></p>",
+    "projectURL": "https://deeheber.github.io/text-adventure-game/"
   }
 ]
