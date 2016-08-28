@@ -22,6 +22,10 @@ article, #about, #stats, #github, #notFound {
   text-transform: capitalize;
 }
 
+#sidebar a[data-category="api"] {
+  text-transform: uppercase;
+}
+
 /***Drop down category filter for mobile view***/
 #category-filter {
   background-color: rgb(240,240,240);
