@@ -1,6 +1,5 @@
 /***  Routes for Home ***/
 page('/',
-  homeController.init,
   homeController.loadAll,
   homeController.index,
   homeController.show
@@ -11,7 +10,6 @@ page('/category', '/');
 page('/category/all', '/');
 
 page('/category/:categoryName',
-  homeController.init,
   homeController.loadByCategory,
   homeController.index,
   homeController.show

@@ -22,3 +22,8 @@ a {
 a:hover {
   color: #808080;
 }
+
+/*** Hides divs on initial page load ***/
+main > div {
+  display: none;
+}
