@@ -3,6 +3,12 @@
 
   topNav.handleNav();
 
+  homeController.init = function(ctx, next){
+    /*** Prevents ugly loading screen before posts are loaded from async AJAX call ***/
+    $('main > div').hide();
+    next();
+  },
+
   homeController.index = function(ctx, next){
     /*** Load Article Data into HTML ***/
     projectView.index(ctx.posts, ctx.params.categoryName);
