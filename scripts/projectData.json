@@ -63,7 +63,7 @@
     "projectURL": "https://github.com/deeheber/koa-app"
   },
   {
-    "title": "Escape from Corporate America",
+    "title": "Text Adventure",
     "publishedOn": "2016-08-21",
     "category": "game",
     "body": "<p>A text adventure game inspired by the American TV adaptation of 'The Office.' Can you escape from work early without your boss's knowledge to meet your top pal at the Pabst Music Festival???</p><p>This game was built using AngularJS, Express, and Webpack.</p><p><img src=\"/images/textGame.png\"/></p>",
