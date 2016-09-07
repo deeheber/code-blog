@@ -3,7 +3,7 @@
     "title": "About Me Site",
     "publishedOn": "2015-11-15",
     "category": "website",
-    "body": "<p>This is a site that was built early on in my formal web development learning process.</p><p>I'm currently utilizing this old project as a learning opportunity by refactoring my past code.</p>  <p>Technologies used: HTML, CSS, JavaScript, and jQuery.</p><p><img src=\"/images/aboutme.png\"/></p>",
+    "body": "<p>This is a site that was built early on in my formal web development learning.</p><p>I'm currently utilizing this old project as a learning opportunity by refactoring my past code. Updates to come soon!</p>  <p>Technologies used: HTML, CSS, JavaScript, and jQuery.</p><p><img src=\"/images/aboutme.png\"/></p>",
     "projectURL": "http://deeheber.github.io/About-Me/"
   },
   {
@@ -24,14 +24,14 @@
     "title": "Rock Paper Scissors",
     "publishedOn": "2015-12-24",
     "category": "game",
-    "body": "<p>Originally, I built this game to practice flow control via if/else statements in JavaScript, but this actually turned into a much larger project.</p><p>I ended up going on a side tangent of exploring of Google's <a href=\"https://developer.chrome.com/extensions/getstarted/\" target=\"_blank\">developer documentation</a> and realized that building a Chrome extension was much easier than I originally thought.</p><p>Technologies used: HTML, CSS, JavaScript, JSON.</p><p><img src=\"/images/rps.png\"/></p>",
+    "body": "<p>A game for serious competition, settling differences, or when you don’t have coins available for a coin toss. </p><p>This project taught me that building a Chrome extension is a lot of fun.</p><p>Technologies used: HTML, CSS, JavaScript, JSON.</p><p><img src=\"/images/rps.png\"/></p>",
     "projectURL": "https://chrome.google.com/webstore/detail/rock-paper-scissors/ngdfhjfgdakniamhoodbaljgoaoollok"
   },
   {
     "title": "Portfolio Blog",
     "publishedOn": "2016-01-19",
     "category": "website",
-    "body": "<p>You're currently looking at it!</p><p>This blog was built using an MVC approach along with some functional programming concepts. It also incorporates third party libraries including <a href=\"http://handlebarsjs.com/\" target=\"_blank\">Handlebars</a>, page.js, and jQuery. AJAX calls within the jQuery fetch and load the JSON data.</p>",
+    "body": "<p>My blog, where I chronicle my adventures in learning how to code. You're currently looking at it.</p><p>Single page application that uses MVC architecture and responsive design principles. The data for the project info and GitHub repositories are dynamically loaded via AJAX calls to an external API.</p>",
     "projectURL": "https://github.com/deeheber/code-blog"
   },
   {
@@ -45,7 +45,7 @@
     "title": "To Do List",
     "publishedOn": "2016-04-14",
     "category": "productivity",
-    "body": "<p>A to do list with minimalist design that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript.</p></p><p><img src=\"/images/todolist.png\"/></p>",
+    "body": "<p>A to do list with minimalist design that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript. This is an in progress project with UI/design updates to come in the near future.</p></p><p><img src=\"/images/todolist.png\"/></p>",
     "projectURL": "http://deeheber.github.io/to-do-list/"
   },
   {
@@ -59,7 +59,7 @@
     "title": "Koa Single Resource API",
     "publishedOn": "2016-08-14",
     "category": "api",
-    "body": "<p>A single resource CRUD API using Node, Koa, Mongoose, and MongoDB. I embarked on this project because I was curious what buildiing an API would look like without the use of Express.</p><p>More detailed usage insructions for how to use the API is in the readme file on the GitHub repository.</p><p>Coming sometime in the future: a front end to make API calls through a browser.</p>",
+    "body": "<p>A single resource CRUD API using Node, Koa, Mongoose, and MongoDB. I embarked on this project because I wanted to experiment with NodeJS server routing beyond Express and vanilla routers.</p><p>More detailed usage insructions for how to use the API is in the readme file on the GitHub repository.</p><p>Coming sometime in the future: a front end to make API calls through a browser.</p>",
     "projectURL": "https://github.com/deeheber/koa-app"
   },
   {
@@ -68,5 +68,12 @@
     "category": "game",
     "body": "<p>A text adventure game inspired by the American TV adaptation of 'The Office.' Can you escape from work early without your boss's knowledge to meet your top pal at the Pabst Music Festival???</p><p>This game was built using AngularJS, Express, and Webpack.</p><p><img src=\"/images/textGame.png\"/></p>",
     "projectURL": "https://deeheber.github.io/text-adventure-game/"
+  },
+    {
+    "title": "Photo Album App",
+    "publishedOn": "2016-09-07",
+    "category": "api",
+    "body": "<p>A place where logged in users can share and manage photos.</p><p>Full stack JavaScript application created with MongoDB, Mongoose, Express, Node.js, AngularJS, and Webpack. The user authentication is handled using JSON Web Tokens. This is an in progess project with updates to come in the near future.</p><p><img src=\"/images/imageGallery.png\"/></p>",
+    "projectURL": "https://dh-photo-album-app.herokuapp.com/#/"
   }
 ]
