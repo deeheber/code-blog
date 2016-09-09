@@ -73,7 +73,7 @@
     "title": "Photo Album App",
     "publishedOn": "2016-09-07",
     "category": "api",
-    "body": "<p>A place where logged in users can share and manage photos.</p><p>Full stack JavaScript application created with MongoDB, Mongoose, Express, Node.js, AngularJS, and Webpack. The user authentication is handled using JSON Web Tokens. This is an in progess project with updates to come in the near future.</p><p><img src=\"/images/imageGallery.png\"/></p>",
+    "body": "<p>A place where logged in users can share and manage photos.</p><p>Full stack JavaScript application created with MongoDB, Mongoose, Express, Node.js, AngularJS, and Webpack. The user authentication is handled using JSON Web Tokens. This is an in progress project with updates to come in the near future.</p><p><img src=\"/images/imageGallery.png\"/></p>",
     "projectURL": "https://dh-photo-album-app.herokuapp.com/#/"
   }
 ]
