@@ -75,5 +75,12 @@
     "category": "api",
     "body": "<p>A place where logged in users can share and manage photos.</p><p>Full stack JavaScript application created with MongoDB, Mongoose, Express, Node.js, AngularJS, and Webpack. The user authentication is handled using JSON Web Tokens. This is an in progress project with updates to come in the near future.</p><p><img src=\"/images/imageGallery.png\"/></p>",
     "projectURL": "https://dh-photo-album-app.herokuapp.com/#/"
+  },
+  {
+    "title": "Clever Job Hunter",
+    "publishedOn": "2016-09-21",
+    "category": "collaboration",
+    "body": "<p>Throw away those spreadsheets and todo apps!</p><p>Clever Job Hunter is a central location where you can keep information about positions, companies, and contacts related to jobs that you've applied for or would like to apply.</p><p>...but if you want a spreadsheet, we do offer the ability to export information in a .csv format.</p><p><img src=\"/images/jobHunter.png\"/></p>",
+    "projectURL": "http://insertclevernamehere.herokuapp.com/#/"
   }
 ]
