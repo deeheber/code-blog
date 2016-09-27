@@ -105,9 +105,6 @@
           localStorage.setItem('sourceData', JSON.stringify(data));
           Post.loadAll(data);
           callback();
-        },
-        error: function(data, message, xhr){
-          alert('Error loading data');
         }
       });
     }
