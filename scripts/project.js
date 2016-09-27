@@ -64,33 +64,56 @@
   };
 
   Post.fetchAll = function(callback){
+    if(localStorage.sourceData){
       /*** Get eTag to see if the file on the server was changed ***/
       /*** This helps to make sure the data in local storage is up to date ***/
-    $.ajax({
-      method: 'HEAD',
-      url: '/scripts/projectData.json',
-      success: function(data, message, xhr){
-        var newETag = xhr.getResponseHeader('ETag');
-        var oldETag = localStorage.eTag;
+      $.ajax({
+        method: 'HEAD',
+        url: '/scripts/projectData.json',
+        success: function(data, message, xhr){
+          var newETag = xhr.getResponseHeader('ETag');
+          var oldETag = localStorage.eTag;
 
-        if (oldETag == newETag) {
-          // console.log('loading from local');
-          /***file wasn't modified so use cached version***/
-          Post.loadAll(JSON.parse(localStorage.sourceData));
-          callback();
-        }
-        else {
-          // console.log('loading from remote');
-          /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
-          localStorage.setItem('eTag', newETag);
-          $.ajax('/scripts/projectData.json').done(function(returnedObj){
-            localStorage.setItem('sourceData', JSON.stringify(returnedObj));
-            Post.loadAll(returnedObj);
+          if (oldETag == newETag) {
+            console.log('loading from local storage');
+            /***file wasn't modified so use cached version***/
+            Post.loadAll(JSON.parse(localStorage.sourceData));
             callback();
-          });
+          }
+          else {
+            console.log('eTag changed, loading from the server');
+            /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
+            localStorage.setItem('eTag', newETag);
+            $.ajax('/scripts/projectData.json').done(function(returnedObj){
+              localStorage.setItem('sourceData', JSON.stringify(returnedObj));
+              Post.loadAll(returnedObj);
+              callback();
+            });
+          }
+        },
+        error: function(data, message, xhr){
+          alert('There was an error retrieving data');
         }
-      }
-    });
+      });
+    } else {
+      // not present in local storage so pull from server
+      //localStorage.setItem('eTag', newETag);
+      $.ajax({
+        method: 'GET',
+        url: '/scripts/projectData.json',
+        success: function(data, message, xhr){
+          console.log('not present in local storage');
+          localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
+          localStorage.setItem('sourceData', JSON.stringify(data));
+          Post.loadAll(data);
+          callback();
+        },
+        error: function(data, message, xhr){
+          alert('Error loading data');
+        }
+      });
+    }
+
   };
 
   module.Post = Post;
