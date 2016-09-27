@@ -72,13 +72,11 @@
         url: '/scripts/projectData.json',
         success: function(data, message, xhr){
           if (localStorage.eTag == xhr.getResponseHeader('ETag')) {
-            console.log('loading from local storage');
             /***file wasn't modified so use cached version***/
             Post.loadAll(JSON.parse(localStorage.sourceData));
             callback();
           }
           else {
-            console.log('eTag changed, loading from the server');
             /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
             $.ajax({
               method: 'GET',
@@ -94,13 +92,11 @@
         }
       });
     } else {
-      // not present in local storage so pull from server
-      //localStorage.setItem('eTag', newETag);
+      /*** not present in local storage so pull from server ***/
       $.ajax({
         method: 'GET',
         url: '/scripts/projectData.json',
         success: function(data, message, xhr){
-          console.log('not present in local storage');
           localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
           localStorage.setItem('sourceData', JSON.stringify(data));
           Post.loadAll(data);
