@@ -71,10 +71,7 @@
         method: 'HEAD',
         url: '/scripts/projectData.json',
         success: function(data, message, xhr){
-          var newETag = xhr.getResponseHeader('ETag');
-          var oldETag = localStorage.eTag;
-
-          if (oldETag == newETag) {
+          if (localStorage.eTag == xhr.getResponseHeader('ETag')) {
             console.log('loading from local storage');
             /***file wasn't modified so use cached version***/
             Post.loadAll(JSON.parse(localStorage.sourceData));
@@ -83,16 +80,17 @@
           else {
             console.log('eTag changed, loading from the server');
             /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
-            localStorage.setItem('eTag', newETag);
-            $.ajax('/scripts/projectData.json').done(function(returnedObj){
-              localStorage.setItem('sourceData', JSON.stringify(returnedObj));
-              Post.loadAll(returnedObj);
-              callback();
+            $.ajax({
+              method: 'GET',
+              url: '/scripts/projectData.json',
+              success: function(data2, message2, xhr2){
+                localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
+                localStorage.setItem('sourceData', JSON.stringify(data2));
+                Post.loadAll(data2);
+                callback();
+              }
             });
           }
-        },
-        error: function(data, message, xhr){
-          alert('There was an error retrieving data');
         }
       });
     } else {
