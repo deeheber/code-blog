@@ -69,7 +69,7 @@
       /*** This helps to make sure the data in local storage is up to date ***/
       $.ajax({
         method: 'HEAD',
-        url: '/scripts/projectData.json',
+        url: '/scripts/data/projectData.json',
         success: function(data, message, xhr){
           if (localStorage.eTag == xhr.getResponseHeader('ETag')) {
             /***file wasn't modified so use cached version***/
@@ -80,7 +80,7 @@
             /***the file on the server was modified or this is the first time loading the site...requesting the entire JSON file again***/
             $.ajax({
               method: 'GET',
-              url: '/scripts/projectData.json',
+              url: '/scripts/data/projectData.json',
               success: function(data2, message2, xhr2){
                 localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
                 localStorage.setItem('sourceData', JSON.stringify(data2));
@@ -95,7 +95,7 @@
       /*** not present in local storage so pull from server ***/
       $.ajax({
         method: 'GET',
-        url: '/scripts/projectData.json',
+        url: '/scripts/data/projectData.json',
         success: function(data, message, xhr){
           localStorage.setItem('eTag', xhr.getResponseHeader('ETag'));
           localStorage.setItem('sourceData', JSON.stringify(data));
