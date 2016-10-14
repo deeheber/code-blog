@@ -31,8 +31,9 @@ main {
   margin-top: 3%;
 }
 
-article, #about, #stats, #github, #notFound {
-  margin: 5%;
+article, #about, #github, #notFound {
+  margin: 3%;
+  margin-top: 0;
   padding: 3%;
 }
 
