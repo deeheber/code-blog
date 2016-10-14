@@ -3,12 +3,6 @@
   display: block;
 }
 
-article, #about, #stats, #github, #notFound {
-  border: 1px solid rgb(44, 51, 57);
-  border-radius: 5px;
-  background-color: 	rgb(240,240,240);
-}
-
 /***Sidebar category links on larger screens***/
 
 #sidebar ul {
@@ -16,9 +10,8 @@ article, #about, #stats, #github, #notFound {
 }
 
 #sidebar a {
-  color: rgb(44, 51, 57);
-  font-size: 1.2em;
-  font-family: 'PT Sans', sans-serif;
+  font-size: 1.3em;
+  font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
 }
 
@@ -28,9 +21,7 @@ article, #about, #stats, #github, #notFound {
 
 /***Drop down category filter for mobile view***/
 #category-filter {
-  background-color: rgb(240,240,240);
-  color: rgb(44, 51, 57);
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
 }
 
@@ -38,14 +29,13 @@ article, #about, #stats, #github, #notFound {
 
   /*** For the Hamburger and X icon ***/
 button {
-  background-color: rgb(44, 51, 57);
+  background-color: darkorange;
   border: none;
 }
 
 #main-nav {
-  background-color: rgb(240,240,240);
   display: none; /* Hide the main nav on initial page load for mobile */
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #main-nav ul {
@@ -57,8 +47,7 @@ button {
 }
 
 #main-nav ul li {
-  font-size: 1.2em;
-  border-bottom: 1px solid rgb(44, 51, 57);
+  font-size: 1.3em;
   list-style-type: none;
   padding: 2%;
 }
@@ -75,7 +64,6 @@ button {
 
   #main-nav {
     display: block;
-    background-color: rgb(44, 51, 57);
   }
 
   #main-nav ul li {
@@ -84,9 +72,6 @@ button {
     padding: 0.7%;
   }
 
-  #main-nav ul li a {
-    color: rgb(240, 240, 240);
-  }
 }
 
 /*** Sticky footer on larger screens ***/
@@ -106,9 +91,10 @@ footer {
 
 /*** Github Page Repo List styles ***/
 #repoList {
-  list-style-type: square;
+  list-style-type: none;
 }
 
 #repoList a {
   text-transform: capitalize;
+  font-size: 1.2em;
 }

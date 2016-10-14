@@ -1,29 +1,26 @@
 body {
-  color: rgb(44, 51, 57);
-  /*background-color: rgba(84, 134, 192, 0.7);*/
-  background-color: lightslategray;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cardo', serif;
 }
 
 h1, h2, h3 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-header, footer {
-  background-color: rgb(44, 51, 57);
-  color: rgb(240,240,240);
-}
-
-a {
-  color: rgb(44, 51, 57);
-  text-decoration: none;
-}
-
-a:hover {
-  color: #808080;
+p {
+  font-size: 1.2em;
 }
 
 /*** Hides divs on initial page load ***/
 main > div {
   display: none;
+}
+
+a {
+  color: darkorange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: dimgray;
+  text-decoration: underline;
 }

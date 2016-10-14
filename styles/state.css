@@ -2,43 +2,16 @@
 a {
   cursor: pointer;
 }
-/*** Underlines the active tab ***/
+
 .active {
-  /*text-decoration: underline !important;*/
-  color: #808080 !important;
+  color: dimgray !important;
 }
 
 .active-sidebar {
-  color: rgb(240,240,240) !important;
+  color: dimgray !important;
 }
 
 @media all and (min-width: 770px){
-  /*** Underline for read more links on hover ***/
-  .read_more {
-    position: relative;
-  }
-
-  .read_more:before {
-    content: "";
-    position: absolute;
-    width: 12%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #808080;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  .read_more:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
-
   /***  Tool tip for blog dates on hover ***/
   time {
     cursor: help;
@@ -71,9 +44,8 @@ a {
 
   time::after {
     background: rgb(44, 51, 57);
-    border-radius: 5px;
     bottom: 150%;
-    color: rgb(240,240,240);
+    color: white;
     width: 10em;
     padding: 1em;
     margin-left: -5em;
