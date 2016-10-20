@@ -1,9 +1,3 @@
-#hamburger img, #cross img {
-  height: 1.5em;
-  width: 1em;
-  display: block;
-}
-
 /***Sidebar category links on larger screens***/
 
 #sidebar ul {
@@ -28,10 +22,10 @@
 
 /******  Navigation Styles  ******/
 
-  /*** For the Hamburger and X icon ***/
+  /*** For the showMenu and hideMenu button on mobile ***/
 button {
   background-color: darkorange;
-  border: none;
+  border: 1px solid black;
 }
 
 #main-nav {
@@ -53,13 +47,13 @@ button {
   padding: 2%;
 }
 
-#cross {
+#hideMenu {
   display: none;
 }
 
 /***  Media queries for nav on desktop screens ***/
 @media all and (min-width: 770px) {
-  #hamburger, #cross {
+  #showMenu, #hideMenu {
     display: none;
   }
 

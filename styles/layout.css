@@ -1,11 +1,6 @@
 header, footer {
   text-align: center;
-  clear: right;
   width: 100%;
-}
-
-button {
-  float: left;
 }
 
 main {
