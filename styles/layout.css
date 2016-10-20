@@ -1,5 +1,4 @@
 header, footer {
-  padding: 1em;
   text-align: center;
   clear: right;
   width: 100%;
@@ -52,6 +51,15 @@ img {
 
 #profilePicContainer {
   text-align: center;
+}
+
+footer > div {
+  margin: 1.25em;
+}
+
+footer div a {
+  /*border: 1px solid black;*/
+  padding: 0.25em;
 }
 
 @media all and (min-width:770px){
