@@ -1,5 +1,10 @@
-/***Sidebar category links on larger screens***/
+article, #github, #about {
+  border: 1px solid orange;
+  background-color: white;
+  border-radius: 5px;
+}
 
+/***Sidebar category links on larger screens***/
 #sidebar ul {
   list-style-type: none;
 }
