@@ -87,7 +87,7 @@
     "title": "GitHub Battle",
     "publishedOn": "2016-11-17",
     "category": "game",
-    "body": "<p>Game that compares two GitHub user profiles and declares a winner based off of a secret alogrithm.</p><p>React single page app that also uses Bootstrap, Axios, Babel, Webpack, Sentry, and the GitHub API.</p><p>New features and improvements are in progress.</p><p><img src=\"/images/githubbattle.png\"/></p>",
+    "body": "<p>Game that compares two GitHub user profiles and declares a winner based off of a secret alogrithm.</p><p>React single page app that also uses Bootstrap, Axios, Babel, Webpack, Sentry, and the GitHub API.</p><p><img src=\"/images/githubbattle.png\"/></p>",
     "projectURL": "https://github-battle-game.herokuapp.com/"
   },
   {
