@@ -96,5 +96,12 @@
     "category": "database",
     "body": "<p>An application that keeps track of book information in your personal library.</p><p>I built this pretty simple app, because I wanted to revisit my old PHP/MySQL days.</p><p>Check out the source code <a href=\"https://github.com/deeheber/book-inventory\">here</a>.</p><p><img src=\"/images/book.png\"</p>",
     "projectURL": "https://book-tracking.herokuapp.com/index.php"
+  },
+    {
+    "title": "Weather",
+    "publishedOn": "2016-12-19",
+    "category": "website",
+    "body": "<p>A website where you can enter a US city/state and receive a weather forecast.</p><p>React single page application that uses the Open Weather Map API for data.</p><p><img src=\"/images/weather.png\"</p>",
+    "projectURL": "http://weatherinreact.herokuapp.com"
   }
 ]
