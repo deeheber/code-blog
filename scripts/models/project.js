@@ -8,6 +8,7 @@
     this.category = option.category;
     this.body = option.body;
     this.projectURL = option.projectURL;
+    this.sourceCode = option.sourceCode;
   }
 
   Post.prototype.toHtml = function() {
@@ -32,6 +33,7 @@
       'title': this.title,
       'publishedOn': this.publishedOn,
       'projectURL': this.projectURL,
+      'sourceCode': this.sourceCode,
       'body': this.body,
       'dateInfo': this.dateInfo,
       'formattedDate': toMmDdYy(this.publishedOn)

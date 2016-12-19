@@ -4,104 +4,119 @@
     "publishedOn": "2015-11-15",
     "category": "website",
     "body": "<p>This is a site that was built early on in my formal web development learning.</p><p>I'm currently utilizing this old project as a learning opportunity by refactoring my past code. Updates to come soon!</p>  <p>Technologies used: HTML, CSS, JavaScript, and jQuery.</p><p><img src=\"/images/aboutme.png\"/></p>",
-    "projectURL": "http://deeheber.github.io/About-Me/"
+    "projectURL": "http://deeheber.github.io/About-Me/",
+    "sourceCode": "https://github.com/deeheber/About-Me"
   },
   {
     "title": "Donut Shop",
     "publishedOn": "2015-11-25",
     "category": "productivity",
     "body": "<p>This app is a forecaster for a fictional donut shop with multiple locations. The target audience for using this app is the shop employess.</p><p>I began by building out the tables for each shop's data using HTML and then gradually added more functionality through JavaScript to dynamically fill the data in the tables. This project gave me some practice in better utilizing JavaScript Objects to store data.</p><p>My favorite feature is the interactivity where the user can select a specific shop to show as well as update the data within the tables.</p><p><img src=\"/images/donutshop.png\" /></p>",
-    "projectURL": "http://deeheber.github.io/Donut-Shop/"
+    "projectURL": "http://deeheber.github.io/Donut-Shop/",
+    "sourceCode": "https://github.com/deeheber/Donut-Shop"
   },
   {
     "title": "Discover Portland",
     "publishedOn": "2015-12-21",
     "category": "collaboration",
     "body": "<p>Unsure what to do this weekend in Portland, OR? Well you're in luck, because this site suggests activities in the area.</p><p>This was one of my first collaboration projects using git. My team was looking to solve the problem of not being able to decide what to do when you have visitors from out of town.</p><p>This app also keeps the currently selected radio boxes in the browser's local storage, just in case the site visitor navigates away from the page to view an external resource and wants to come back to the activities page just as they left it.</p> <p>My main contribution to this was writing the underlying  JS logic for the radio buttons on the 'activities' page.</p><p><img src=\"/images/discoverportland.png\"/></p>",
-    "projectURL": "http://risachi.github.io/travel-project/"
+    "projectURL": "http://risachi.github.io/travel-project/",
+    "sourceCode": "https://github.com/risachi/travel-project"
   },
   {
     "title": "Rock Paper Scissors",
     "publishedOn": "2015-12-24",
     "category": "game",
     "body": "<p>A game for serious competition, settling differences, or when you don’t have coins available for a coin toss. </p><p>This project taught me that building a Chrome extension is a lot of fun.</p><p>Technologies used: HTML, CSS, JavaScript, JSON.</p><p><img src=\"/images/rps.png\"/></p>",
-    "projectURL": "https://chrome.google.com/webstore/detail/rock-paper-scissors/ngdfhjfgdakniamhoodbaljgoaoollok"
+    "projectURL": "https://chrome.google.com/webstore/detail/rock-paper-scissors/ngdfhjfgdakniamhoodbaljgoaoollok",
+    "sourceCode": "https://github.com/deeheber/Rock-Paper-Scissors-Chrome-Extension"
   },
   {
     "title": "Portfolio Blog",
     "publishedOn": "2016-01-19",
     "category": "website",
     "body": "<p>My blog, where I chronicle my adventures in learning how to code. You're currently looking at it.</p><p>Single page application that uses MVC architecture and responsive design principles. The data for the project info and GitHub repositories are dynamically loaded via AJAX calls to an external API.</p>",
-    "projectURL": "https://github.com/deeheber/code-blog"
+    "projectURL": "https://github.com/deeheber/code-blog",
+    "sourceCode": "https://github.com/deeheber/code-blog"
   },
   {
     "title": "Bike Bright",
     "publishedOn": "2016-02-27",
     "category": "collaboration",
     "body": "<p>I was outraged when my bicycle seat was stolen. After discussing this problem with a few colleagues, we found that others also had similiar experiences. We decided to combine our efforts and talents to build out a solution on our own.</p><p>This app was built with a mobile first apprach with the angle that cyclists in Portland, OR would be using this while on the go. The heart of the application is the map in which we customized using the Google Maps JavaScript API. Some features of the map include a heatmap that shows simulated crime data, bicycle parking locations, and a location finder. We also had the vision of creating a small peer to peer community and added a discussion board using Disqus.</p><p>My primary contributions indcluded adding the user interactivity to hide/show the different data layers for the map and also adding in the functions to build those custom data layers.</p><p>Some enhancements we'd like to add in the 2.0 version include obtaining data sources from the Portland Police in order to dynamically populate that data. One of the biggest challenges while building this was being able to get access to accurate data with enough data points to build out a heatmap, so the current version is simulated data based off of data points from <a href=\"http://www.civicapps.org\" target=\"_blank\">civicapps.org</a>.</p><p><img src=\"/images/bikebright.png\"/></p>",
-    "projectURL": "https://bikebright.herokuapp.com/"
+    "projectURL": "https://bikebright.herokuapp.com/",
+    "sourceCode": "https://github.com/risachi/Code301BikeBright"
   },
   {
     "title": "To Do List",
     "publishedOn": "2016-04-14",
     "category": "productivity",
     "body": "<p>A to do list with minimalist design that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript. This is an in progress project with UI/design updates to come in the near future.</p></p><p><img src=\"/images/todolist.png\"/></p>",
-    "projectURL": "http://deeheber.github.io/to-do-list/"
+    "projectURL": "http://deeheber.github.io/to-do-list/",
+    "sourceCode": "https://github.com/deeheber/to-do-list"
   },
   {
     "title": "Node Weather",
     "publishedOn": "2016-06-07",
     "category": "api",
     "body": "<p>A command line application that allows you to find the current weather in a given United States location. Technologies used: node.js.</p><p>More detailed usage insructions can be found in the readme file on the GitHub repository.</p></p><p><img src=\"/images/nodeWeather.gif\"/></p>",
-    "projectURL": "https://github.com/deeheber/node-weather"
+    "projectURL": "https://github.com/deeheber/node-weather",
+    "sourceCode": "https://github.com/deeheber/node-weather"
   },
   {
     "title": "Koa Single Resource API",
     "publishedOn": "2016-08-14",
     "category": "api",
     "body": "<p>A single resource CRUD API using Node, Koa, Mongoose, and MongoDB. I embarked on this project because I wanted to experiment with NodeJS server routing beyond Express and vanilla routers.</p><p>More detailed usage insructions for how to use the API is in the readme file on the GitHub repository.</p><p>Coming sometime in the future: a front end to make API calls through a browser.</p>",
-    "projectURL": "https://github.com/deeheber/koa-app"
+    "projectURL": "https://github.com/deeheber/koa-app",
+    "sourceCode": "https://github.com/deeheber/koa-app"
   },
   {
     "title": "Text Adventure",
     "publishedOn": "2016-08-21",
     "category": "game",
     "body": "<p>A text adventure game inspired by the American TV adaptation of 'The Office.' Can you escape from work early without your boss's knowledge to meet your top pal at the Pabst Music Festival???</p><p>This game was built using AngularJS, Express, and Webpack.</p><p><img src=\"/images/textGame.png\"/></p>",
-    "projectURL": "https://deeheber.github.io/text-adventure-game/"
+    "projectURL": "https://deeheber.github.io/text-adventure-game/",
+    "sourceCode": "https://github.com/deeheber/text-adventure-game"
   },
     {
     "title": "Photo Album App",
     "publishedOn": "2016-09-07",
     "category": "api",
     "body": "<p>A place where logged in users can share and manage photos.</p><p>Full stack JavaScript application created with MongoDB, Mongoose, Express, Node.js, AngularJS, and Webpack. The user authentication is handled using JSON Web Tokens. This is an in progress project with updates to come in the near future.</p><p><img src=\"/images/imageGallery.png\"/></p>",
-    "projectURL": "https://dh-photo-album-app.herokuapp.com/#/"
+    "projectURL": "https://dh-photo-album-app.herokuapp.com/#/",
+    "sourceCode": "https://github.com/deeheber/photo-albums"
   },
   {
     "title": "Clever Job Hunter",
     "publishedOn": "2016-09-21",
     "category": "collaboration",
     "body": "<p>Throw away those spreadsheets and todo apps!</p><p>Clever Job Hunter is a central location where you can keep information about positions, companies, and contacts related to jobs that you've applied for or would like to apply.</p><p>...but if you want a spreadsheet, we do offer the ability to export information in a .csv format.</p><p><img src=\"/images/jobHunter.png\"/></p>",
-    "projectURL": "http://insertclevernamehere.herokuapp.com/#/"
+    "projectURL": "http://insertclevernamehere.herokuapp.com/#/",
+    "sourceCode": "https://github.com/InsertCleverNameHere"
   },
   {
     "title": "GitHub Battle",
     "publishedOn": "2016-11-17",
     "category": "game",
     "body": "<p>Game that compares two GitHub user profiles and declares a winner based off of a secret alogrithm.</p><p>React single page app that also uses Bootstrap, Axios, Babel, Webpack, Sentry, and the GitHub API.</p><p><img src=\"/images/githubbattle.png\"/></p>",
-    "projectURL": "https://github-battle-game.herokuapp.com/"
+    "projectURL": "https://github-battle-game.herokuapp.com/",
+    "sourceCode": "https://github.com/deeheber/github-battle"
   },
   {
     "title": "Book Inventory",
     "publishedOn": "2016-12-02",
     "category": "database",
-    "body": "<p>An application that keeps track of book information in your personal library.</p><p>I built this pretty simple app, because I wanted to revisit my old PHP/MySQL days.</p><p>Check out the source code <a href=\"https://github.com/deeheber/book-inventory\">here</a>.</p><p><img src=\"/images/book.png\"</p>",
-    "projectURL": "https://book-tracking.herokuapp.com/index.php"
+    "body": "<p>An application that keeps track of book information in your personal library.</p><p>I built this pretty simple app, because I wanted to revisit my old PHP/MySQL days.</p><p><img src=\"/images/book.png\"</p>",
+    "projectURL": "https://book-tracking.herokuapp.com/index.php",
+    "sourceCode": "https://github.com/deeheber/book-inventory"
   },
     {
     "title": "Weather",
     "publishedOn": "2016-12-19",
     "category": "website",
     "body": "<p>A website where you can enter a US city/state and receive a weather forecast.</p><p>React single page application that uses the Open Weather Map API for data.</p><p><img src=\"/images/weather.png\"</p>",
-    "projectURL": "http://weatherinreact.herokuapp.com"
+    "projectURL": "http://weatherinreact.herokuapp.com",
+    "sourceCode": "https://github.com/deeheber/react-weather"
   }
 ]

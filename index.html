@@ -23,8 +23,12 @@
       <script id="post-template" type="text/x-handlebars-template">
         <article  data-category="{{category}}">
           <h2>{{title}}</h2>
-            <p class="date"><time data-tip="{{dateInfo}}">{{formattedDate}}</time></p>
-            <p class="external_link"><a href="{{projectURL}}" target="_blank">View Project</a></p>
+            <p><time data-tip="{{dateInfo}}">{{formattedDate}}</time></p>
+            <p>
+              <a href="{{projectURL}}" target="_blank">View Project</a>
+              <br />
+              <a href="{{sourceCode}}" target="_blank">Source Code</a>
+            </p>
             <div class="post_body">{{{body}}}</div>
             <p class="read_more"><a href="">Read More</a></p>
         </article>
