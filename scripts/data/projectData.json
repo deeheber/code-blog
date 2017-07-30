@@ -51,7 +51,7 @@
     "title": "To Do List",
     "publishedOn": "2016-04-14",
     "category": "productivity",
-    "body": "<p>A to do list with minimalist design that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript. This is an in progress project with UI/design updates to come in the near future.</p></p><p><img src=\"/images/todolist.png\"/></p>",
+    "body": "<p>A to do list with minimalist design that stores the task data in the browser's local storage. So when you come back it'll be just as you left it. Users have the option to add a task, mark a task as complete, delete an existing task, and edit an exisiting task.</p><p>I decided to revisit DOM manipulation without any external JavaScript libraries in this project. Technologies used: HTML, CSS, JavaScript.</p></p><p><img src=\"/images/todolist.png\"/></p>",
     "projectURL": "http://deeheber.github.io/to-do-list/",
     "sourceCode": "https://github.com/deeheber/to-do-list"
   },
@@ -118,5 +118,13 @@
     "body": "<p>A website where you can enter a US city/state and receive a weather forecast.</p><p>React single page application that uses the Open Weather Map API for data.</p><p><img src=\"/images/weather.png\"</p>",
     "projectURL": "http://weatherinreact.herokuapp.com",
     "sourceCode": "https://github.com/deeheber/react-weather"
+  },
+      {
+    "title": "To Do List - React / Redux",
+    "publishedOn": "2017-06-05",
+    "category": "productivity",
+    "body": "<p>The classic todo list approach to experimenting with a new front end framework.</p><p>The user has the ability to create, read, update, delete, and toggle completion of each task.</p><p><img src=\"/images/todo.png\"</p>",
+    "projectURL": "https://todolistreact.herokuapp.com/",
+    "sourceCode": "https://github.com/deeheber/react-test/tree/master/todo-list"
   }
 ]
