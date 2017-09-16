@@ -111,7 +111,7 @@
     "projectURL": "https://book-tracking.herokuapp.com/index.php",
     "sourceCode": "https://github.com/deeheber/book-inventory"
   },
-    {
+  {
     "title": "Weather",
     "publishedOn": "2016-12-19",
     "category": "website",
@@ -119,12 +119,28 @@
     "projectURL": "http://weatherinreact.herokuapp.com",
     "sourceCode": "https://github.com/deeheber/react-weather"
   },
-      {
+  {
     "title": "To Do List - React / Redux",
     "publishedOn": "2017-06-05",
     "category": "productivity",
     "body": "<p>The classic todo list approach to experimenting with a new front end framework.</p><p>The user has the ability to create, read, update, delete, and toggle completion of each task.</p><p><img src=\"/images/todo.png\"</p>",
     "projectURL": "https://todolistreact.herokuapp.com/",
     "sourceCode": "https://github.com/deeheber/react-test/tree/master/todo-list"
+  },
+  {
+    "title": "Hapi Server",
+    "publishedOn": "2017-07-12",
+    "category": "api",
+    "body": "<p>Wanted to experiment a bit more using a non-Express Node framework. In this project, I chose hapi and built a super simple CRUD app to store info about books. Because there is no frontend set up, I decided to use the hapi-swagger npm package to get a GUI for making those API calls.</p><p><img src=\"/images/hapi.png\"</p>",
+    "projectURL": "https://hapi-danielle.herokuapp.com/documentation",
+    "sourceCode": "https://github.com/deeheber/hapi-server"
+  },
+  {
+    "title": "Restauraunt Navigator",
+    "publishedOn": "2017-07-21",
+    "category": "website",
+    "body": "<p>This project started out as a follow along tutorial to review basic Node concepts, but I eventually added my own touch to the project for fun.</p><p>You can view restauraunts and reviews. If you're logged in, you have the ability to add your own store, edit stores you've previously added, like stores, and leave comments on stores.</p><p><img src=\"/images/restauraunt.png\"</p>",
+    "projectURL": "https://restaurant-navigator.herokuapp.com/",
+    "sourceCode": "https://github.com/deeheber/restaurant-navigator"
   }
 ]
