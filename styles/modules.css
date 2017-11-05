@@ -1,5 +1,5 @@
 article, #github, #about {
-  border: 1px solid orange;
+  border: 1px solid #333;
   background-color: white;
   border-radius: 5px;
 }
@@ -29,8 +29,9 @@ article, #github, #about {
 
   /*** For the showMenu and hideMenu button on mobile ***/
 button {
-  background-color: darkorange;
-  border: 1px solid black;
+  background-color: #0F92DF;
+  color: white;
+  border: 1px solid #333;
 }
 
 #main-nav {
