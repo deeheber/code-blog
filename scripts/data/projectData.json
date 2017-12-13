@@ -144,7 +144,7 @@
     "sourceCode": "https://github.com/deeheber/restaurant-navigator"
   },
   {
-    "title": "Yinzerize - a Pittsburghese Translator",
+    "title": "Yinzer - a Pittsburghese Translator",
     "publishedOn": "2017-12-11",
     "category": "productivity",
     "body": "<p>Are you planning a visit to Western Pennsylvania and want to talk like the locals? If you answered yes, then this is the Alexa skill is for you!</p><p>This is a skill in which a user will say a word or phrase and Alexa will repeat that word or phrase back to the user in <a href='https://en.wikipedia.org/wiki/Western_Pennsylvania_English' target='_blank'>Pittsburghese</a>.</p><p>I was very impressed with a demo on how to build an Alexa skill at a local NodeJS meetup, that I just had to try building one myself. This was built using NodeJS, alexa-sdk, and is hosted via AWS Lambda. Currently in the process of publishing this to the skills store on Amazon so stay tuned for a link.</p><p><img src=\"/images/alexa.png\"</p>",
