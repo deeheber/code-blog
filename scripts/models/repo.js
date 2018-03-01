@@ -13,7 +13,7 @@
 
   repos.fetchAll = function(callback){
     $.ajax({
-      url: '/github/users/deeheber/repos',
+      url: '/github/users/deeheber/repos?per_page=100',
       type: 'GET',
       success: function(data, message, xhr){
         repos.all = data;
