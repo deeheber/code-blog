@@ -150,5 +150,13 @@
     "body": "<p>Are you planning a visit to Western Pennsylvania and want to talk like the locals? If you answered yes, then this is the Alexa skill is for you!</p><p>This is a skill in which a user will say a word or phrase and Alexa will repeat that word or phrase back to the user in <a href='https://en.wikipedia.org/wiki/Western_Pennsylvania_English' target='_blank'>Pittsburghese</a>.</p><p>I was very impressed with a demo on how to build an Alexa skill at a local NodeJS meetup, that I just had to try building one myself. This was built using NodeJS, alexa-sdk, and is hosted via AWS Lambda.</p><p><img src=\"/images/alexa.png\"</p>",
     "projectURL": "https://www.amazon.com/dp/B0787M1125/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1513347282&sr=1-1&keywords=hey+yinz",
     "sourceCode": "https://github.com/deeheber/pittsburghese-translator-alexa-skill"
+  },
+  {
+    "title": "Take Note",
+    "publishedOn": "2018-03-31",
+    "category": "productivity",
+    "body": "<p>A note taking app built using react, serverless, and AWS.</p><p>Using AWS in my day job got me interested wnating explore the capbilities further. This site uses the following AWS services: Cognito, API Gateway, Lambda, Dynamo DB, S3, and Cloudfront.</p><p><img src=\"/images/take-note.png\"</p>",
+    "projectURL": "http://d15jgxh06n7vs9.cloudfront.net/",
+    "sourceCode": "https://github.com/deeheber/take-note"
   }
 ]
