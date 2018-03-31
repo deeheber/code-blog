@@ -155,7 +155,7 @@
     "title": "Take Note",
     "publishedOn": "2018-03-31",
     "category": "productivity",
-    "body": "<p>A note taking app built using react, serverless, and AWS.</p><p>Using AWS in my day job got me interested wnating explore the capbilities further. This site uses the following AWS services: Cognito, API Gateway, Lambda, Dynamo DB, S3, and Cloudfront.</p><p><img src=\"/images/take-note.png\"</p>",
+    "body": "<p>A note taking app built using React, Serverless, and AWS.</p><p>Using AWS in my day job peaked my interest in exploring the capbilities further for a personal project. This site uses the following AWS services: Cognito, API Gateway, Lambda, Dynamo DB, S3, and Cloudfront.</p><p><img src=\"/images/take-note.png\"</p>",
     "projectURL": "http://d15jgxh06n7vs9.cloudfront.net/",
     "sourceCode": "https://github.com/deeheber/take-note"
   }
