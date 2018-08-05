@@ -1,17 +1,23 @@
-# Danielle's Development Portfolio
+# Danielle's (old) Development Portfolio
 
-My blog, where I explore, discover, and chronicle my adventures in learning through coding projects.
+My (old) blog, where I explore, discover, and chronicle my adventures in learning through coding projects.
 
-[Live Site Here](http://www.deeheber.com)
+**Note:** This site has been retired in favor of [a more generic landing page](https://danielleheberling.xyz/).
 
-##Directions to edit and run locally
-1. Download the .zip file
-2. Generate a [GitHib API token](https://github.com/settings/tokens/new)
-3. Under /scripts create a blank file called token.js
-4. Within token.js add the following
-`var gitHubToken = '[enter your generated github token string here] '; `
-as a note: never publish your GitHub API token anywhere accessibile to the public
-5. Before the closing `<body>` tag in the *index.html* file add the following code `<script type="text/javascript" src="/scripts/token.js"></script>`
-6. Run the files over http using a local server on your computer. [Live server](https://www.npmjs.com/package/live-server) or [node.js](https://nodejs.org/en/) are decent options if you aren't sure how to do this.
+If you'd like to view all of my recent personal code projects check out my [GitHub profile](https://github.com/deeheber).
 
-[![Stories in Ready](https://badge.waffle.io/deeheber/code-blog.png?label=ready&title=Ready)](http://waffle.io/deeheber/code-blog)
+## Directions to edit and run locally
+- Ensure you have [node.js](https://nodejs.org/en/) installed on your computer and also have a [GitHub](https://github.com/) account.
+- Download the .zip file or clone the repo
+- Generate a [GitHib API token](https://github.com/settings/tokens/new)
+- In the project root create a blank file called `token.js`
+-  Within the `token.js` file add the following:
+  ```
+  var GITHUB_TOKEN = '[enter your generated github token string here]';
+
+  module.exports = GITHUB_TOKEN;
+  ```
+
+  Note: **Never** publish an API token anywhere accessibile to the public
+- In the project root run `npm install`
+- `npm start` will run the site on `localhost:3000` unless you have a `PORT` variable specified in your `process.env`.
