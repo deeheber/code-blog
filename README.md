@@ -4,6 +4,8 @@ My (old) blog, where I explore, discover, and chronicle my adventures in learnin
 
 **Note:** This site has been retired, but I'm keeping it around to have as a reminder of how far I've come.
 
+<img width="1271" alt="personal-site" src="https://user-images.githubusercontent.com/12616554/114314257-cb41b480-9aae-11eb-8909-361b7bd140f7.png">
+
 ## Directions to edit and run locally
 - Ensure you have [node.js](https://nodejs.org/en/) installed on your computer and also have a [GitHub](https://github.com/) account.
 - Download the .zip file or clone the repo
