@@ -2,9 +2,7 @@
 
 My (old) blog, where I explore, discover, and chronicle my adventures in learning through coding projects.
 
-**Note:** This site has been retired in favor of [a more generic landing page](https://danielleheberling.xyz/).
-
-If you'd like to view all of my recent personal code projects check out my [GitHub profile](https://github.com/deeheber).
+**Note:** This site has been retired, but I'm keeping it around to have as a reminder of how far I've come.
 
 ## Directions to edit and run locally
 - Ensure you have [node.js](https://nodejs.org/en/) installed on your computer and also have a [GitHub](https://github.com/) account.
